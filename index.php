@@ -3,15 +3,7 @@
 <?php require_once("partes/HEAD.php"); ?>
 
 
-<!-- <style>
-    .logofoto{
-  width: 10%;
-  height: 10%;
-  position: relative;
-  top: 50%;
-  left: 30%;
-   transform: translate(-50%,0%);
-} -->
+
 </style>
 <body class="hold-transition login-page1">
 
@@ -30,13 +22,13 @@
                 
 
                 <form class="box" action="" method="post">
-                    <h1>Login</h1>
+                    <h1></h1>
                     <div class="input-group mb-3">
                         <input type="email" name="email" placeholder="email">
                         
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="ClaveS" placeholder="Contraseña">
+                        <input type="password" name="Clave" id="Clave" placeholder="Contraseña">
                     </div>
                     <div class="col-mb3">
                             <input type="submit" name="" value="Login">
