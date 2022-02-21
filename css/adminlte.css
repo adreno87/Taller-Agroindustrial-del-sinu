@@ -4824,6 +4824,10 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 0 solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .card > hr {
@@ -35003,9 +35007,9 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .login-card-body,
 .register-card-body {
-  background-color: #fff;
+  background-color: #191919; 
   border-top: 0;
-  color: #666;
+  color: #fff;
   padding: 20px;
 }
 

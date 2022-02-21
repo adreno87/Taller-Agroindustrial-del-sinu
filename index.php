@@ -6,11 +6,11 @@
 
 <div class="login-box">
     <div class="login-logo">
-    <b>Admin</b>LTE</a>
+    <b>Taller Agroindustrial del Sinu</b></a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
-        <div class="card-body login-card-body">
+        <div class="card-body login-card-body ">
         <p class="login-box-msg">Inicio de Sesion</p>
 
         <form action="" method="post">
@@ -41,7 +41,7 @@
             </div>
             <!-- /.col -->
             <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                <button type="submit" class="btn btn-primary btn-block">Iniciar sesion</button>
             </div>
             <!-- /.col -->
             </div>
