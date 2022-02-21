@@ -12,10 +12,10 @@
     </div>
     <!-- /.login-logo -->
     
-       
+    
                 
 
-                <form class="box" action="index.html" method="post">
+                <form class="box" action="" method="post">
                     <h1>Login</h1>
                     <div class="input-group mb-3">
                         <input type="text" name="" placeholder="Username">
