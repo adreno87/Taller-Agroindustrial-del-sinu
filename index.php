@@ -30,6 +30,9 @@
                     <div class="input-group mb-3">
                         <input type="password" name="Clave" id="Clave" placeholder="Contraseña">
                     </div>
+
+                    
+
                     <div class="col-mb3">
                             <input type="submit" name="" value="Login">
                     </div>
