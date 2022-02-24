@@ -1,11 +1,9 @@
   <!-- Main Sidebar Container -->
   <!--menu izquierdo-->
-  <aside style="background-color:#FFBC80"class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside style="background-color:#C1F4C5"class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link" >
-      
-      <span class="brand-text font-weight-light"style="color:black" >Taller agroindustrial<br>del SINU</span>
-      <img src="img/logoSINU.png" alt="AdminLTE Logo" height="60" width="60" class="img-circle elevation-9" style="opacity: .9">
+    <a href="index3.html" class="brand-link" >   
+      <img  src="img/logoSINU.png" alt="AdminLTE Logo" height="99" width="99" class="img-circle elevation-9" style="opacity: .9">
     </a>
 
     <!-- Barra lateral usuario -->
@@ -57,25 +55,25 @@
               </li>
               <li class="nav-item">
                 <a href="./index2.html" class="nav-link">
-                  <i class="nav-icon far fa-circle text-danger"></i>
+                  <i class="nav-icon far fa-circle text-success"></i>
                   <p style="color:black">Ventas</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
-                  <i class="nav-icon far fa-circle text-danger"></i>
+                  <i class="nav-icon far fa-circle text-warning"></i>
                   <p style="color:black">Contabilidad</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
-                  <i class="nav-icon far fa-circle text-danger"></i>
+                  <i class="nav-icon far fa-circle text-info"></i>
                   <p style="color:black">Recursos Humanos</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
-                  <i class="nav-icon far fa-circle text-danger"></i>
+                  <i class="nav-icon far fa-circle text-indigo"></i>
                   <p style="color:black">Tecnologia</p>
                 </a>
               </li>
@@ -83,76 +81,6 @@
           </li>
           <!--opciones generar-->
           <li class="nav-header" style="color:black">GENERAR</li>
-          <!--generar tablas-->
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p style="color:black">
-                Tablas
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <!--generar calendario-->
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p style="color:black">
-                Calendario
-                <span class="badge badge-info right">0</span>
-              </p>
-            </a>
-          </li>
-          <!--generar notificaciones-->
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p style="color:black">
-                Notificaciones
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Read</p>
-                </a>
-              </li>
-            </ul>
-          </li>
           <!--generar reportes-->
           <li class="nav-item">
             <a href="#" class="nav-link">
@@ -224,6 +152,79 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <!--generar tablas-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p style="color:black">
+                Tablas
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/tables/simple.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Simple Tables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>DataTables</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>jsGrid</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <!--generar notificaciones-->
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-envelope"></i>
+              <p style="color:black">
+                Notificaciones
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inbox</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/compose.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Compose</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Read</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <!--generar calendario-->
+          <li class="nav-item">
+            <a href="pages/calendar.html" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p style="color:black">
+                Calendario
+                <span class="badge badge-info right">0</span>
+              </p>
+            </a>
           </li>
           <!--generar pendientes-->
           <li class="nav-header" style="color:black">PENDIENTES</li>
