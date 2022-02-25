@@ -14,11 +14,6 @@
 
 </div>
     
-
-
-
-
-
 <?php require_once("partes/scripts.php"); ?>
 
 </body>
