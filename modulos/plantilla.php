@@ -5,7 +5,7 @@
         <div class="row mb-2">          
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">              
-              <li class="breadcrumb-item active" >TALLER AGROINDUSTRIAL DEL SINU</li>
+              <li class="breadcrumb-item active" >TALLER AGROINDUSTRIAL DEL </li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
