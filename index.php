@@ -5,7 +5,7 @@
 
 
 
-<body class="hold-transition login-page1 ">
+<body class="hold-transition login-page1">
 
 <div class="login-box">
 <div class="logofoto">
