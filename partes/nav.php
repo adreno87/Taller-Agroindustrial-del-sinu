@@ -3,7 +3,7 @@
   <aside style="background-color:#C1F4C5"class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link" >   
-      <img  src="img/logoSINU.png" alt="AdminLTE Logo" height="99" width="99" class="img-circle elevation-9" style="opacity: .9">
+      <img  src="img/logoSINU.png" alt="AdminLTE Logo"  height="99" width="99" class="img-circle elevation-9" style="opacity: .9">
     </a>
 
     <!-- Barra lateral usuario -->
@@ -11,10 +11,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="img/descarga.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block" style="color:black">Alexander Pierce</a>
+          <a href="#" class="d-block" style="color:black">usuario</a>
         </div>
       </div>
 
