@@ -1,15 +1,14 @@
 <?php
-
 session_start();
-require_once('conexion.php');
-
+ require_once("conexion.php");
 
 if(isset($_POST['boton'])){
 
     $usuario = $_POST['usuario'];
-    $clave = sha1($_POST['clave']);
-    $consulta = "select * from usuarios where usuario = 'usuario'AND contraseña ='$clave'";
-    $resultado =mysqli_query($conexion,$consulta)or die('no se consulto el usuario');
+    $clave =sha1 ($_POST ['clave']);
+
+    $consulta ="select * from usuarios where nombre = '$usuario'AND password = '$clave' ";
+    $resultado = mysqli_query($conexion,$consulta) or die('no se consulto el usuario') ;
     $user = mysqli_fetch_array($resultado);
 
     if($user['id']  !=""){
@@ -23,24 +22,17 @@ if(isset($_POST['boton'])){
 
 }
 
-}else{
+
+}
+else{
 
     header("Location: index.php");
 
 
+
 }
 
+
+
+
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-

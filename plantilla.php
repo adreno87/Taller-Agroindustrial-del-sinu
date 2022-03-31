@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
+<?php require_once("conexion.php");?>
 <?php require_once("bloqueo.php"); ?>
 <?php require_once("partes/HEAD.php"); ?>
 
