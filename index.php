@@ -21,10 +21,10 @@
     
                 
 
-                <form class="box" action="" method="post">
+                <form class="box" action="login.php" method="post">
                     <h1></h1>
                     <div class="input-group mb-3">
-                        <input type="email" name="email" placeholder="email">
+                        <input type="text" name="usario" placeholder="usuario">
                         
                     </div>
                     <div class="input-group mb-3">
