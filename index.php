@@ -24,7 +24,7 @@
                 <form class="box" action="login.php" method="post">
                     <h1></h1>
                     <div class="input-group mb-3">
-                        <input type="text" name="usario" placeholder="usuario">
+                        <input type="text" name="usuario" placeholder="usuario">
                         
                     </div>
                     <div class="input-group mb-3">
