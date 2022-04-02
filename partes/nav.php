@@ -77,6 +77,12 @@
                   <p style="color:black">Tecnologia</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="tabla.php" class="nav-link">
+                  <i class="nav-icon far fa-circle text-indigo"></i>
+                  <p style="color:black">Tablas</p>
+                </a>
+              </li>
             </ul>
           </li>
           <!--opciones generar-->
