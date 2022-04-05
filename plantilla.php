@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <?php require_once("partes/HEAD.php"); ?>
+<?php require_once("bloqueo.php"); ?>
+<?php require_once("conexion.php"); ?>
+
 
 <body class="hold-transition sidebar-mini layout-fixed">
 
@@ -14,11 +17,6 @@
 
 </div>
     
-
-
-
-
-
 <?php require_once("partes/scripts.php"); ?>
 
 </body>

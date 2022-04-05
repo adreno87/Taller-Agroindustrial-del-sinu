@@ -1,20 +1,23 @@
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav style="background-color:#FFBC80" class="main-header navbar navbar-expand navbar-white navbar-danger" >
         <!-- Left navbar links -->
         <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item" >
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Home</a>
+            <a href="index3.html" class="nav-link">INICIO</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Contact</a>
+            <a href="#" class="nav-link">CONTACTO</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="salir.php" class="nav-link">CERRAR SESIÓN</a>
         </li>
         </ul>
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
-        <!-- Navbar Search -->
+        <!-- Navbar Search buscar -->
         <li class="nav-item">
             <a class="nav-link" data-widget="navbar-search" href="#" role="button">
             <i class="fas fa-search"></i>
@@ -38,38 +41,40 @@
 
 
 
-        <!-- Notifications Dropdown Menu -->
+        <!-- Notificacion Dropdown(desplegable) menu campana-->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
             <i class="far fa-bell"></i>
-            <span class="badge badge-warning navbar-badge">15</span>
+            <span class="badge badge-warning navbar-badge">10</span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <span class="dropdown-item dropdown-header">15 Notificaciones</span>
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item">
-                <i class="fas fa-envelope mr-2"></i> 4 new messages
+                <i class="fas fa-envelope mr-2"></i> 4 nuevos mensajes
                 <span class="float-right text-muted text-sm">3 mins</span>
             </a>
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item">
-                <i class="fas fa-users mr-2"></i> 8 friend requests
-                <span class="float-right text-muted text-sm">12 hours</span>
+                <i class="fas fa-users mr-2"></i> 8 solicitudes de usuario
+                <span class="float-right text-muted text-sm">12 horas</span>
             </a>
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item">
-                <i class="fas fa-file mr-2"></i> 3 new reports
-                <span class="float-right text-muted text-sm">2 days</span>
+                <i class="fas fa-file mr-2"></i> 3 nuevos reportes
+                <span class="float-right text-muted text-sm">2 dias</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+            <a href="#" class="dropdown-item dropdown-footer">Ver todas las notificaciones</a>
             </div>
         </li>
+        <!--ampliar pantalla-->
         <li class="nav-item">
             <a class="nav-link" data-widget="fullscreen" href="#" role="button">
             <i class="fas fa-expand-arrows-alt"></i>
             </a>
         </li>
+        <!--configuracion-->
         <li class="nav-item">
             <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
             <i class="fas fa-th-large"></i>
