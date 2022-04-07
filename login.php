@@ -6,7 +6,7 @@
     if(isset($_POST['boton'])){
 
         $usuarios=$_POST['usuario'];
-        $clave=$_POST['Clave'];
+        $clave= sha1 ($_POST['Clave']);
 
         $consulta="SELECT * FROM user WHERE usuario='$usuarios' AND pass = '$clave'";
         $resultado=mysqli_query($conexion,$consulta) or die("Error al realizar la consulta");
