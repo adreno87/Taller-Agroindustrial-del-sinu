@@ -13,3 +13,5 @@ function eliminarinforme_r(rid){
         window.location = "bloques/r_humanos/eliminar.php?id="+rid;
     }
 }
+
+
