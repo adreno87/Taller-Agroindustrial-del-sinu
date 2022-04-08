@@ -14,7 +14,7 @@
           <img src="img/descarga.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block" style="color:black">usuario</a>
+          <a href="#" class="d-block" style="color:black"><?php echo $user['nombre'];  ?></a>
         </div>
       </div>
 
@@ -47,6 +47,9 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <?php
+                if($user['usuario']== 'admin'){
+              ?>
               <li class="nav-item">
                 <a href="./index.html" class="nav-link">
                   <i class="nav-icon far fa-circle text-danger"></i>
@@ -65,12 +68,17 @@
                   <p style="color:black">Contabilidad</p>
                 </a>
               </li>
+              <?php
+                }?>
               <li class="nav-item">
                 <a href="R_Humanos.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-info"></i>
                   <p style="color:black">Recursos Humanos</p>
                 </a>
               </li>
+              <?php
+                if($user['usuario']== 'admin'){
+              ?>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
                   <i class="nav-icon far fa-circle text-indigo"></i>
@@ -129,72 +137,8 @@
               </li>              
             </ul>
           </li>
-          
+          <?php
+                }?>
           <!--generar notificaciones-->
-          
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p style="color:black">
-                Notificaciones
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="color:black">Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="color:black">Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p style="color:black">Leer</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          <!--generar calendario-->
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p style="color:black">
-                Calendario
-                <span class="badge badge-info right">0</span>
-              </p>
-            </a>
-          </li>
-          <!--generar pendientes-->
-          <li class="nav-header" style="color:black">PENDIENTES</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text" style="color:black">Importante</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p style="color:black">Pendiente</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p style="color:black">Informacion</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
     <!-- /.sidebar -->
   </aside>
