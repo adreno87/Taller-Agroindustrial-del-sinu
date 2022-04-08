@@ -1,5 +1,4 @@
 <?php
-    require_once("../../conexion.php");
 
     $rid = $_GET['id'];
 
@@ -7,11 +6,25 @@
     $resulth = mysqli_query($conexion, $conh) or die("Error en la consulta");
     $humanos_d = mysqli_fetch_array($resulth);
 
+    //editar
+    if(isset($_POST["boton"])){
+        $rid = $_POST["id"];
+        $fecha = $_POST["fecha"];
+        $informe = $_POST["informe"];
+        $descripcion = $_POST["descripcion"];
+
+        $editar_rh = "UPDATE recursos_humanos SET fecha = '$fecha', informe = '$informe', descripcion = '$descripcion' WHERE id = '$rid'";
+        mysqli_query($conexion, $editar_rh) or die("no cambio informacion");
+        //header("Location: ../../R_Humanos.php");
+        echo "<script>window.Location = '../../R_Humanos.php' </script>";
+
+    }
+
 ?>
 
-<div id="formulario" style="display: none;">
+<div id="formulario" >
 
-    <form action="" method="post">
+    <form action="R_Humanos.php?id=<?php echo $humanos_d["id"];?>" method="post">
         <input type="hidden" name="id" value="<?php echo $humanos_d["id"];?>">
         <table>
             <tr>
@@ -28,7 +41,7 @@
             </tr>
             <tr>
                 <th>
-                    <button name="cancelar" value="insertar" type="button" class="btn btn-warning" onclick="abrirformulario('cerrar')" >Cancelar</button>
+                    <button name="cancelar" value="insertar" type="button" class="btn btn-warning" onclick="window.location ='R_Humanos.php'" >Cancelar</button>
                 </th>
                 <td><input type="submit" name="boton" value="Insertar" class="btn btn-success"></td>
             </tr>
@@ -50,7 +63,8 @@
 
 
 
-
+<br>
+<br>
 
 <div id="consulta" >
             <table class="table table-bordered bg-light" > 
@@ -79,7 +93,7 @@
             </table>
         </div>
 
-<script src="../../js/funciones.js"></script>
+
 <script>
     document.getElementById("fecha").value = "<?php echo $humanos_d['fecha']; ?>";
     document.getElementById("informe").value = "<?php echo $humanos_d['informe']; ?>";

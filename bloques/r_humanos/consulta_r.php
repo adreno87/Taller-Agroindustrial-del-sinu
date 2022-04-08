@@ -17,7 +17,7 @@
                     <td><?php echo $humanos['fecha']; ?></td>
                     <td><?php echo $humanos['informe']; ?></td>
                     <td><?php echo $humanos['descripcion']; ?></td>
-                    <td><button title="Editar" type="button" class="btn btn-success">Editar</button></td>
+                    <td><button onclick="window.location = 'R_Humanos.php?id=<?php echo $humanos['id']; ?>'" title="Editar" type="button" class="btn btn-success">Editar</button></td>
                     <td><button  onclick="eliminarinforme_r(<?php echo $humanos['id']; ?>)" title="Borrar" type="button" class="btn btn-danger">Borrar</button></td>
                 </tr>
                 <?php

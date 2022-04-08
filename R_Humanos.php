@@ -22,7 +22,14 @@
 
         <br>
         <br>
-        <?php require_once('bloques/r_humanos/consulta_r.php'); ?>
+        <?php
+         if(isset($_GET["id"]) && $_GET["id"] > 0){
+            require_once('bloques/r_humanos/editar_r.php'); 
+         }else{
+            require_once('bloques/r_humanos/consulta_r.php');
+            }
+            
+            ?>
 
 
 
