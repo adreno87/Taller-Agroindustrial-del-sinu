@@ -7,3 +7,9 @@ function abrirformulario(dato) {
     }
 }
 
+function eliminarinforme_r(rid){
+    var r = confirm("¿Esta seguro que desea eliminar este registro?");
+    if(r == true){
+        window.location = "bloques/r_humanos/eliminar.php?id="+rid;
+    }
+}
