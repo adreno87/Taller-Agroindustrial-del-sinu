@@ -17,7 +17,7 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
         <h1>Recursos Humanos</h1>
         
-        
+        <?php require_once("bloques/r_humanos/formulario_r.php"); ?>
 
 
         <br>
@@ -50,7 +50,10 @@
     <!-- /.control-sidebar -->
     </div>
         
+   
+    </body>
+
+    <script src="js/funciones.js"></script>
     <?php require_once("partes/scripts.php"); ?>
 
-    </body>
     </html>
