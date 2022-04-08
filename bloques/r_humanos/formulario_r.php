@@ -21,7 +21,7 @@ Insertar Informe</button>
             </tr>
             <tr>
                 <th>
-                    <button name="botoninsertar" value="insertar" type="button" class="btn btn-warning" onclick="abrirformulario('cerrar')" >Cancelar</button>
+                    <button name="cancelar" value="insertar" type="button" class="btn btn-warning" onclick="abrirformulario('cerrar')" >Cancelar</button>
                 </th>
                 <td><input type="submit" name="boton" value="Insertar" class="btn btn-success"></td>
             </tr>
