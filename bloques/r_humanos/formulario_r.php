@@ -13,7 +13,7 @@ Insertar Informe</button>
             </tr>
             <tr>
                 <th>Informe</th>
-                <td><input type="text" name="informe"  placeholder="Informe" class="form-control"></td>
+                <td><input type="file" name="informe"  placeholder="Informe" class="form-control"></td>
             </tr>
             <tr>
                 <th>Descripcion</th>
