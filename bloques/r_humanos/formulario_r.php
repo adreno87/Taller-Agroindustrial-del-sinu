@@ -5,7 +5,7 @@ Insertar Informe</button>
 
 <div id="formulario" style="display: none;">
 
-    <form action="bloques/r_humanos/insertar.php" method="post">
+    <form action="bloques/r_humanos/insertar.php" method="post" enctype="multipart/form-data">
         <table>
             <tr>
                 <th>Fecha</th>
@@ -35,3 +35,4 @@ Insertar Informe</button>
 
 
 </div>
+

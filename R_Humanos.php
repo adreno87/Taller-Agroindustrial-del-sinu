@@ -61,6 +61,7 @@
     </body>
 
     <script src="js/funciones.js"></script>
-    <?php require_once("partes/scripts.php"); ?>
+    <?php require_once("partes/scripts.php");?>
+    
 
     </html>

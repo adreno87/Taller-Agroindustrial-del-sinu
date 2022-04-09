@@ -10,7 +10,7 @@
     if(isset($_POST["boton"])){
         $rid = $_POST["id"];
         $fecha = $_POST["fecha"];
-        $informe = $_POST["informe"];
+        $informe = $_POST['informe'];
         $descripcion = $_POST["descripcion"];
 
         $editar_rh = "UPDATE recursos_humanos SET fecha = '$fecha', informe = '$informe', descripcion = '$descripcion' WHERE id = '$rid'";
@@ -24,7 +24,7 @@
 
 <div id="formulario" >
 
-    <form action="R_Humanos.php?id=<?php echo $humanos_d["id"];?>" method="post">
+    <form action="R_Humanos.php?id=<?php echo $humanos_d["id"];?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $humanos_d["id"];?>">
         <table>
             <tr>
@@ -33,7 +33,8 @@
             </tr>
             <tr>
                 <th>Informe</th>
-                <td><input type="text" name="informe" id="informe" placeholder="Informe" class="form-control"></td>
+                 <?php //echo $humanos_d[2];?> 
+                <td><input type="file" name="informe" id="informe" placeholder="Informe" class="form-control"></td>
             </tr>
             <tr>
                 <th>Descripcion</th>
