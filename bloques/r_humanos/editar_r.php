@@ -10,10 +10,39 @@
     if(isset($_POST["boton"])){
         $rid = $_POST["id"];
         $fecha = $_POST["fecha"];
-        $informe = $_POST['informe'];
+        //$informe = $_POST['informe'];
         $descripcion = $_POST["descripcion"];
 
-        $editar_rh = "UPDATE recursos_humanos SET fecha = '$fecha', informe = '$informe', descripcion = '$descripcion' WHERE id = '$rid'";
+        $destinoinfo = "../../informes/RH";
+
+        //capturar datos del formulario
+        $fecha = $_POST['fecha'];
+        $descripcion = $_POST['descripcion'];
+       
+        //capturar archivo
+        $info = $_FILES['informe'];
+        // echo "archivo";
+        // echo $info['informe'];
+       $nombre_info = $info['name'];
+       $tamano_info = $info['size'];
+       list($ninfo,$ext) = explode('.', $nombre_info);
+        $ninfo =  $nombre_info;
+
+        //subir archivo
+       if($ext=="pdf" || $ext=="xlsx" || $ext=="docx"){
+           if($tamano_info <= 200000000){
+               move_uploaded_file($info['tmp_name'], $destinoinfo.'/'.$ninfo);
+           }else{
+               echo "<script> alert( 'tamaño excedido') </script>";
+            }
+        }else{
+           echo "<script> alert( 'extensión no permitida') </script>";
+     }
+
+
+
+
+        $editar_rh = "UPDATE recursos_humanos SET fecha = '$fecha', informe = '$ninfo', descripcion = '$descripcion' WHERE id = '$rid'";
         mysqli_query($conexion, $editar_rh) or die("no cambio informacion");
         //header("Location: ../../R_Humanos.php");
         echo "<script>window.Location = '../../R_Humanos.php' </script>";
@@ -33,11 +62,13 @@
             </tr>
             <tr>
                 <th>Informe</th>
-                <td><input type="file" name="informe" id="informe" placeholder="Informe" class="form-control"></td>
+                
+                <td> <?php echo $humanos_d["informe"];?><input type="file" name="informe" id="informe" placeholder="Informe" class="form-control"></td>
             </tr>
             <tr>
                 <th>Descripcion</th>
-                <td><input type="text" name="descripcion" id="descripcion" required="required" placeholder="Descripcion" class="form-control" ></td>
+               
+                <td><input type="text" name="descripcion" id="descripcion" required="required" placeholder="Descripcion" class="form-control" value=" <?php echo $humanos_d["descripcion"];?>"></td>
             </tr>
             <tr>
                 <th>
@@ -81,8 +112,8 @@
                     <th>Fecha</th>
                     <th>Informe</th>
                     <th>Descripcion</th>
-                    <th></th>
-                    <th></th>
+                    <th>Accion</th>
+                    
                   </tr>
                   </thead>
                   <tbody>
@@ -95,8 +126,12 @@
                       <td><?php echo $humanos['fecha']; ?></td>
                       <td><?php echo $humanos['informe']; ?></td>
                       <td><?php echo $humanos['descripcion']; ?></td>
-                      <td><button onclick="window.location = 'R_Humanos.php?id=<?php echo $humanos['id']; ?>'" title="Editar" type="button" class="btn btn-success">Editar</button></td>
-                      <td><button  onclick="eliminarinforme_r(<?php echo $humanos['id']; ?>)" title="Borrar" type="button" class="btn btn-danger">Borrar</button></td>
+                      <td><button onclick="window.location = 'R_Humanos.php?id=<?php echo $humanos['id']; ?>'" title="Editar" type="button" class="btn btn-success">
+                      <i class="fas fa-pencil-alt">
+                              </i>
+                      Editar</button></td>
+                      <td><button  onclick="eliminarinforme_r(<?php echo $humanos['id']; ?>)" title="Borrar" type="button" class="btn btn-danger"> <i class="fas fa-trash">
+                              </i>Borrar</button></td>
                     </tr>
                     <?php
                     } ?>
@@ -106,8 +141,8 @@
                     <th>Fecha</th>
                     <th>Informe</th>
                     <th>Descripcion</th>
-                    <th></th>
-                    <th></th>
+                    <th>Accion</th>
+                    
                   </tr>
                   </tfoot>
                 </table>
