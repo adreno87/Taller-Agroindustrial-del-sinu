@@ -21,14 +21,14 @@
     
                 
 
-                <form  action="login.php"   method ="post" class="box" action=""method="post" >
+                <form  action="login.php"   method ="post" class="box" >
                     
                     <div class="input-group mb-3">
-                        <input type="email" id="email" name="usuario"  placeholder="usuario"  >
+                        <input type="text" name="usuario"  placeholder="usuario"  >
                         
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="clave" id="Clave" placeholder="Clave">
+                        <input type="password" name="Clave" id="Clave" placeholder="Clave">
                     </div>
 
                     

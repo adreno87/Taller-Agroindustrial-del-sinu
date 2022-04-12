@@ -10,6 +10,9 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">CONTACTO</a>
         </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="salir.php" class="nav-link">CERRAR SESIÓN</a>
+        </li>
         </ul>
 
         <!-- Right navbar links -->

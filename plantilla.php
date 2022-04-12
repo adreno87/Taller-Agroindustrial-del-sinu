@@ -10,6 +10,7 @@
 <?php require_once("partes/header.php"); ?>
 <?php require_once("partes/nav.php"); ?>
 
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper"> 
 

@@ -5,28 +5,29 @@ session_start();
 if(isset($_POST['boton'])){
 
     $usuario = $_POST['usuario'];
-    $clave =sha1 ($_POST ['clave']);
+    $clave = sha1($_POST ['Clave']);
 
-    $consulta ="select * from usuarios where nombre = '$usuario'AND password = '$clave' ";
+    $consulta ="SELECT * FROM usuarios WHERE usuario = '$usuario'AND pass = '$clave' ";
     $resultado = mysqli_query($conexion,$consulta) or die('no se consulto el usuario') ;
     $user = mysqli_fetch_array($resultado);
 
+    //print_r($user);
+
     if($user['id']  !=""){
-        $_SESSION['usuario'] = $user['id'];
-        header("Location: plantilla.php");
+        $_SESSION["usuario"] = $user["id"];
+            header("Location:plantilla.php");
 
 }else{
 
-    header("Location: index.php");
+        header("Location: index.php");
 
 
 }
 
 
-}
-else{
+}else{
 
-    header("Location: index.php");
+        header("Location: index.php");
 
 
 
