@@ -73,6 +73,8 @@
               </li>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
+                <a href="tecnologia.php" class="nav-link">
+                  
                   <i class="nav-icon far fa-circle text-indigo"></i>
                   <p style="color:black">Tecnologia</p>
                 </a>

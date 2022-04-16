@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $clave= "";
-$bd = "bd_proyecto_sinu";
+$bd = "bd_taller_agroindustrial_sinu";
 
 
 $conexion = mysqli_connect($servidor,$usuario,$clave) or die('nose conecto a mysql');
