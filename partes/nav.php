@@ -63,7 +63,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="contabilidad.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-warning"></i>
                   <p style="color:black">Contabilidad</p>
                 </a>
