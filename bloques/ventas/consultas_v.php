@@ -38,11 +38,11 @@ while($venta = mysqli_fetch_array($resultado_v)){
         
     <?php
 
-   $consulta_p = "SELECT * FROM productos WHERE id = " .  $venta[ 'productos_id' ];
+   $consulta_p = " SELECT * FROM productos WHERE id = " .  $venta[ 'productos_id' ];
     $res_producto =  mysqli_query($conexion,$consulta_p) or die('no consulto el producto');
-    $productos_idd =mysqli_fetch_array($res_producto);
+    $productos_id =mysqli_fetch_array($res_producto);
 
-    
+    echo $productos_id[ 'nombre' ];
     
     ?>
 
@@ -56,6 +56,9 @@ while($venta = mysqli_fetch_array($resultado_v)){
 </tr>
 
 <?php }  ?>
+
+
+
 </table>
 
 
@@ -64,5 +67,3 @@ while($venta = mysqli_fetch_array($resultado_v)){
 
  </div>
  <br>
-
-</div>
