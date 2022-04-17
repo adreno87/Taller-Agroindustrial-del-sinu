@@ -1,38 +1,25 @@
 <?php
-session_start();
- require_once("conexion.php");
+    session_start();
+    require_once("conexion.php");
 
-if(isset($_POST['boton'])){
+    
+    if(isset($_POST['boton'])){
 
-    $usuario = $_POST['usuario'];
-    $clave =sha1 ($_POST ['clave']);
+        $usuarios=$_POST['usuario'];
+        $clave= sha1 ($_POST['Clave']);
 
-    $consulta ="select * from usuarios where nombre = '$usuario'AND password = '$clave' ";
-    $resultado = mysqli_query($conexion,$consulta) or die('no se consulto el usuario') ;
-    $user = mysqli_fetch_array($resultado);
+        $consulta="SELECT * FROM user WHERE usuario='$usuarios' AND contraseña = '$clave'";
+        $resultado=mysqli_query($conexion,$consulta) or die("Error al realizar la consulta");
+        $user=mysqli_fetch_array($resultado);
 
-    if($user['id']  !=""){
-        $_SESSION['usuario'] = $user['id'];
-        header("Location: plantilla.php");
 
+        if($user["id"]!=""){
+        $_SESSION['usuario']=$user["id"];
+            header("location:plantilla.php");
+        }else{
+            header("location:index.php");
+    }
 }else{
-
-    header("Location: index.php");
-
-
+    header("location:index.php");
 }
-
-
-}
-else{
-
-    header("Location: index.php");
-
-
-
-}
-
-
-
-
 ?>

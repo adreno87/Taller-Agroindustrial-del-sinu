@@ -1,11 +1,9 @@
 <?php
-session_start();
+    session_start();
 
+    $_SESSION['usuario']="";
 
-$_SESSION['usuario']="";
-
-session_destroy();
-header("Location: index.php");
-
+    session_destroy();
+    header("location:index.php")
 
 ?>

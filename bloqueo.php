@@ -1,28 +1,19 @@
-<?php 
-session_start();
+<?php
+    session_start();
+    require_once("conexion.php");
+    $usuarios= $_SESSION['usuario'];
 
- require_once("conexion.php");
+    $consulta= "SELECT * FROM user WHERE id='$usuarios'";
+    $resultado= mysqli_query($conexion,$consulta) or die("no se pudo realizar la consulta");
+    $user= mysqli_fetch_array($resultado);
 
+    
 
-$usuario =$_SESSION['usuario'];
-
-$consulta = "select * from usuarios where id = 'usuario'";
-$resultado =mysqli_query($conexion,$consulta)or die('no se consulto el usuario');
-$user = mysqli_fetch_array($resultado);
-
-
-if($user['id']  !=""){
-    $dato="entro";
-
-}else{
-
-header("Location: index.php");
-
-
-}
-
-
-
+    if($user['id'] !=""){
+        $dato="entro";
+    }else{
+        header("Location: index.php");
+    }
 
 
 

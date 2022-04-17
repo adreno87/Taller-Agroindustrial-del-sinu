@@ -5,7 +5,7 @@
 
 
 
-<body class="hold-transition login-page1 ">
+<body class="hold-transition login-page1">
 
 <div class="login-box">
 <div class="logofoto">
@@ -21,14 +21,14 @@
     
                 
 
-                <form  action="login.php"   method ="post" class="box" action=""method="post" >
-                    
+                <form class="box" action="login.php" method="post">
+                    <h1></h1>
                     <div class="input-group mb-3">
-                        <input type="email" id="email" name="usuario"  placeholder="usuario"  >
+                        <input type="text" name="usuario" placeholder="usuario">
                         
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="clave" id="Clave" placeholder="Clave">
+                        <input type="password" name="Clave" id="Clave" placeholder="Contraseña">
                     </div>
 
                     

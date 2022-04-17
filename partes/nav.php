@@ -14,7 +14,7 @@
           <img src="img/descarga.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block" style="color:black">usuario</a>
+          <a href="#" class="d-block" style="color:black"><?php echo $user['nombre'];  ?></a>
         </div>
       </div>
 
@@ -47,14 +47,29 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <?php
+                if($user['usuario']== 'admin'){
+              ?>
               <li class="nav-item">
                 <a href="./index.html" class="nav-link">
                   <i class="nav-icon far fa-circle text-danger"></i>
                   <p style="color:black">Compras</p>
                 </a>
               </li>
+
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="productos.php" class="nav-link">
+                  <i class="nav-icon far fa-circle text-danger"></i>
+                  <p style="color:black">productos</p>
+                </a>
+              </li>
+
+
+
+
+
+              <li class="nav-item">
+                <a href="Ventas.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-success"></i>
                   <p style="color:black">Ventas</p>
                 </a>
@@ -65,16 +80,27 @@
                   <p style="color:black">Contabilidad</p>
                 </a>
               </li>
+              <?php
+                }?>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="R_Humanos.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-info"></i>
                   <p style="color:black">Recursos Humanos</p>
                 </a>
               </li>
+              <?php
+                if($user['usuario']== 'admin'){
+              ?>
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
                   <i class="nav-icon far fa-circle text-indigo"></i>
                   <p style="color:black">Tecnologia</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="tabla.php" class="nav-link">
+                  <i class="nav-icon far fa-circle text-indigo"></i>
+                  <p style="color:black">Tablas</p>
                 </a>
               </li>
             </ul>
@@ -90,65 +116,11 @@
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/invoice.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Invoice</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/e-commerce.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>E-commerce</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/projects.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Projects</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project-add.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Add</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project-edit.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Edit</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/project-detail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Project Detail</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/contacts.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Contacts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/faq.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>FAQ</p>
-                </a>
-              </li>
+            <ul class="nav nav-treeview">              
               <li class="nav-item">
                 <a href="pages/examples/contact-us.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Contact us</p>
+                  <p style="color:black">Contact us</p>
                 </a>
               </li>
             </ul>
@@ -166,83 +138,19 @@
               <li class="nav-item">
                 <a href="pages/tables/simple.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tabla simple</p>
+                  <p style="color:black">Tabla simple</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Tabla exel</p>
+                  <p style="color:black">Tabla exel</p>
                 </a>
               </li>              
             </ul>
           </li>
-          
+          <?php
+                }?>
           <!--generar notificaciones-->
-          
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p style="color:black">
-                Notificaciones
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Leer</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          
-          <!--generar calendario-->
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p style="color:black">
-                Calendario
-                <span class="badge badge-info right">0</span>
-              </p>
-            </a>
-          </li>
-          <!--generar pendientes-->
-          <li class="nav-header" style="color:black">PENDIENTES</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text" style="color:black">Importante</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-warning"></i>
-              <p style="color:black">Pendiente</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-info"></i>
-              <p style="color:black">Informacion</p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
     <!-- /.sidebar -->
   </aside>
