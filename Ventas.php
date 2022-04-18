@@ -16,9 +16,12 @@
         <br>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
         <h1>Ventas</h1>
-        <br>
+        
  
         <?php require_once('bloques/ventas/formulario_v.php'); ?>
+
+        <br>
+        <br>
         
 
         <?php require_once('bloques/ventas/consultas_v.php'); ?>
