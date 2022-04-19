@@ -40,7 +40,7 @@ Insertar venta</button>
 
 
 
-                 <select name= 'productos'>  
+                 <select name= 'productos_id'>  
                                   
                      
                 
@@ -56,7 +56,7 @@ while($pdt = mysqli_fetch_array($respro)) {
       
       <option value="<?php echo $pdt[ 'id' ]; ?>" label="<?php echo $pdt[ 'nombre' ]; ?>">  
 
-<php echo $pdt[ 'nombre' ]; ?>
+<?php echo $pdt[ 'nombre' ]; ?>
 
 </option>    
 
