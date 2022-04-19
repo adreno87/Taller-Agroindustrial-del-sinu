@@ -8,7 +8,7 @@
         $usuarios=$_POST['usuario'];
         $clave= sha1 ($_POST['Clave']);
 
-        $consulta="SELECT * FROM user WHERE usuario='$usuarios' AND contraseña = '$clave'";
+        $consulta="SELECT * FROM user WHERE usuario='$usuarios' AND pass = '$clave'";
         $resultado=mysqli_query($conexion,$consulta) or die("Error al realizar la consulta");
         $user=mysqli_fetch_array($resultado);
 
