@@ -56,8 +56,20 @@
                   <p style="color:black">Compras</p>
                 </a>
               </li>
+
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="productos.php" class="nav-link">
+                  <i class="nav-icon far fa-circle text-danger"></i>
+                  <p style="color:black">productos</p>
+                </a>
+              </li>
+
+
+
+
+
+              <li class="nav-item">
+                <a href="Ventas.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-success"></i>
                   <p style="color:black">Ventas</p>
                 </a>
