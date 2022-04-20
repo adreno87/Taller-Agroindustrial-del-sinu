@@ -50,10 +50,10 @@ Insertar productos</button>
             </tr>
 
                 <th>
-                    <button name="cancelar" value="insertar" type="button" style="background-color:darkorange" class="btn btn-warning" onclick="abrirformulario('cerrar')" >Cancelar</button>
+                    <button name="cancelar" value="insertar" type="button" class="btn btn-outline-warning" class="btn btn-warning" onclick="abrirformulario('cerrar')" >Cancelar</button>
                 </th>
 
-                <td><input type="submit" name="boton" value="Insertar" class="btn btn-success"></td>
+                <td><input type="submit" name="boton" value="Insertar" class="btn btn-outline-success"></td>
             
         </table>
     </form>
