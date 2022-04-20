@@ -1,5 +1,5 @@
 <div id= formulario>
-<table width="100%"  border="3"  cellspacing="0">
+<table width="100%"  border="1"  cellspacing="0" class="table table-striped">
 <tr>
     <th>Fecha</th>
     <th>Subtotal</th>
@@ -50,7 +50,7 @@ while($venta = mysqli_fetch_array($resultado_v)){
 </td>
 
     <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
-    <td>  <img src="img/eliminar.jpg"  width="24"  title="eliminar"   alt="">          </td>
+    <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar"   alt="">          </td>
 
 
 </tr>
