@@ -6,7 +6,7 @@ Insertar venta</button>
 <div id="formulario" style="display: none;">
 
     <form action="bloques/ventas/insertar_v.php" method="post" enctype="multipart/form-data">
-        <table>
+        <table >
         
         
        <tr>
@@ -50,13 +50,13 @@ Insertar venta</button>
 
 $conpro = "SELECT * from productos order by nombre";
 $respro = mysqli_query($conexion,$conpro) or die('no se consulto el producto');
-while($pdt = mysqli_fetch_array($respro)) { 
+while($productos_id = mysqli_fetch_array($respro)) { 
 ?>
       
       
-      <option value="<?php echo $pdt[ 'id' ]; ?>" label="<?php echo $pdt[ 'nombre' ]; ?>">  
+      <option value="<?php echo $productos_id[ 'id' ]; ?>" label="<?php echo $productos_id[ 'nombre' ]; ?>">  
 
-<?php echo $pdt[ 'nombre' ]; ?>
+<?php echo $productos_id[ 'nombre' ]; ?>
 
 </option>    
 
