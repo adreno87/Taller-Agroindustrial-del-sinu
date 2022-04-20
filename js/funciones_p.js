@@ -9,9 +9,9 @@ function abrirformulario(dato) {
 
 
 
-function eliminarproducto(cid){
+function eliminarproducto(pid){
     var mensaje = confirm("¿Esta seguro que desea eliminar este producto?");
     if(mensaje == true){
-        window.location = "bloques/productos/eliminar_p.php?id = " + cid;
+        window.location = "bloques/productos/eliminar_p.php?id=" + pid;
     }
 }

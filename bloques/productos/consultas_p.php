@@ -44,6 +44,7 @@ while($productos = mysqli_fetch_array($resultado_p)){
 </tr>
 
 <?php }  ?>
+
 </table>
 
 

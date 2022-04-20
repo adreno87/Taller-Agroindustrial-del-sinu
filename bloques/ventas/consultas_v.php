@@ -50,7 +50,7 @@ while($venta = mysqli_fetch_array($resultado_v)){
 </td>
 
     <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
-    <td>  <img src="img/eliminar.jpg"  width="24"  title="eliminar"   alt="">          </td>
+    <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar"   alt="">          </td>
 
 
 </tr>
