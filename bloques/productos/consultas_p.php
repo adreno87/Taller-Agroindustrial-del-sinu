@@ -1,12 +1,12 @@
 <div id= formulario>
 <table width="100%"  border="1"  cellspacing="0" class="table table-striped">
-<tr>
-    <th>codigo</th>
-    <th>nombre</th>
-    <th>valor</th>
-    <th>descripcion</th>
-    <th>stock</th>
-    <th>marca</th>
+<tr   class="table-dark ">
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Valor</th>
+    <th>Descripcion</th>
+    <th>Stock</th>
+    <th>Marca</th>
 
     <th></th>
     <th></th>
@@ -27,7 +27,7 @@ while($productos = mysqli_fetch_array($resultado_p)){
 
 <tr>
 
-    <td><?php echo $productos[ 'codigo' ]; ?></td>
+    <td ><?php echo $productos[ 'codigo' ]; ?></td>
     <td><?php echo $productos[ 'nombre' ]; ?></td>
     
     <td><?php echo $productos[ 'valor' ]; ?></td>
