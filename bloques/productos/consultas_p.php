@@ -33,11 +33,19 @@ while($productos = mysqli_fetch_array($resultado_p)){
     <td><?php echo $productos[ 'valor' ]; ?></td>
     <td><?php echo $productos[ 'descripcion' ]; ?></td>
     <td><?php echo $productos[ 'stock' ]; ?></td>
-    <td><?php echo $productos[ 'marca' ]; ?></td>
+    <td><?php
+
+$consulta_m = " SELECT * FROM marcas WHERE id = " .  $productos[ 'marcas_id' ];
+ $res_m =  mysqli_query($conexion,$consulta_m) or die('no consulto el producto');
+ $marcas_id =mysqli_fetch_array($res_m);
+
+ echo $marcas_id[ 'nombre' ];
+ 
+ ?>       </td>
 
     
 
-    <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
+    <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt=""     >  </td>   
     <td>  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarproducto(<?php echo $productos[ 'id' ]; ?>);"  alt="">  </td>
 
 

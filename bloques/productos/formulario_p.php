@@ -46,7 +46,24 @@ Insertar productos</button>
             
             <tr>
                 <th>Marca</th>
-                <td><input type="text" name="marca" required="required" placeholder="Marca" class="form-control" ></td>
+                <td><select name= 'marcas_id'>
+                <?php 
+
+$conpro = "SELECT * from marcas order by id";
+$respro = mysqli_query($conexion,$conpro) or die('no se consulto el producto');
+    while($id = mysqli_fetch_array($respro)) { 
+?>
+
+<option value="<?php echo $id[ 'id' ]; ?>" label="<?php echo $id[ 'nombre' ]; ?>">  
+
+<?php echo $id[ 'nombre' ]; ?>
+
+</option>    
+
+   <?php } ?>  
+
+
+                </select></td>
             </tr>
 
                 <th>
