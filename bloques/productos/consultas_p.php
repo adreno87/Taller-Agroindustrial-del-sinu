@@ -1,5 +1,5 @@
 <div id= formulario>
-<table width="100%"  border="1"  cellspacing="0" class="table table-striped">
+<table     width="100%"  border="1"  cellspacing="0" class="table table-striped">
 <tr   class="table-dark ">
     <th>Codigo</th>
     <th>Nombre</th>

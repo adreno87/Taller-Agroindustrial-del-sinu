@@ -1,8 +1,8 @@
 <div id= formulario>
-<table width="100%"  border="1"  cellspacing="0" class="table table-striped">
-<tr>
-<th>#</th>
-    <th>marca</th>
+<table     style="width:500px"     width="100%"  border="1"  cellspacing="0" class="table table-striped">
+<tr  class="table table-dark">
+<th>#</th> 
+   <th>marca</th>
     <th></th>
     <th></th>
 
