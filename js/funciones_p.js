@@ -14,6 +14,12 @@ function eliminarproducto(pid){
     if(mensaje == true){
 
 
-        window.location = "bloques/productos/eliminar_p.php="+pid;
+        window.location = "bloques/productos/eliminar_p.php?id=" + pid;
     }
 }
+
+
+
+
+
+

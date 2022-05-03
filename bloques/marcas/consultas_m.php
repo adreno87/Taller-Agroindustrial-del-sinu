@@ -30,13 +30,13 @@ while($marcas = mysqli_fetch_array($resultado_m)){
 
 <tr>
 
-<td    style= ><?php echo $marcas[ 'id' ]; ?></td>
+<td  ><?php echo $marcas[ 'id' ]; ?></td>
     <td    ><?php echo $marcas[ 'nombre' ]; ?></td>
 
     
 
     <td        style="width:150px;"          >  <img src="img/editar.jpg"  width="23"  title="Editar"   alt=""   >  </td>   
-    <td  style="width:150px;"       >  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarproducto(<?php echo $productos[ 'id' ]; ?>);"  alt="">  </td>
+    <td  style="width:150px;"       >  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarmarca(<?php echo $marcas[ 'id' ]; ?>);"  alt="">  </td>
 
 
 </tr>

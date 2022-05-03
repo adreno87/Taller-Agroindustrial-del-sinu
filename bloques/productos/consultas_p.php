@@ -41,7 +41,7 @@ $consulta_m = " SELECT * FROM marcas WHERE id = " .  $productos[ 'marcas_id' ];
 
  echo $marcas_id[ 'nombre' ];
  
- ?>       </td>
+ ?>   </td>
 
     
 
