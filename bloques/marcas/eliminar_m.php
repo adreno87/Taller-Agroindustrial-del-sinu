@@ -5,8 +5,8 @@ require_once('../../conexion.php');
 
 $cim = $_GET['id'];
 
-$eliminar_m = " DELETE * FROM marcas WHERE id = $cim";
- mysqli_query($conexion,$eliminar_m) or die('no se consulto las marcas');
+$eliminar_m = " delete from marcas WHERE id = $cim";
+ mysqli_query($conexion,$eliminar_m) or die('no se elimino la  marcas');
 
 
 header("Location: ../../marcas.php");
