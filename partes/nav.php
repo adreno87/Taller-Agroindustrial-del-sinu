@@ -80,23 +80,26 @@
                   <p style="color:black">Contabilidad</p>
                 </a>
               </li>
-              <?php
-                }?>
+              
               <li class="nav-item">
                 <a href="R_Humanos.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-info"></i>
                   <p style="color:black">Recursos Humanos</p>
                 </a>
               </li>
-              <?php
-                if($user['usuario']== 'admin'){
-              ?>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="./P_Tecnologia.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-indigo"></i>
                   <p style="color:black">Tecnologia</p>
                 </a>
               </li>
+              <?php
+                }?>
+              
+              
+              <?php
+                if($user['usuario']== 'admin'){
+              ?>
               <li class="nav-item">
                 <a href="tabla.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-indigo"></i>
