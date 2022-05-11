@@ -1,12 +1,12 @@
 <div id= formulario>
-<table width="100%"  border="1"  cellspacing="0" class="table table-striped">
-<tr>
-    <th>codigo</th>
-    <th>nombre</th>
-    <th>valor</th>
-    <th>descripcion</th>
-    <th>stock</th>
-    <th>marca</th>
+<table     width="100%"  border="1"  cellspacing="0" class="table table-striped">
+<tr   class="table-dark ">
+    <th>Codigo</th>
+    <th>Nombre</th>
+    <th>Valor</th>
+    <th>Descripcion</th>
+    <th>Stock</th>
+    <th>Marca</th>
 
     <th></th>
     <th></th>
@@ -27,17 +27,25 @@ while($productos = mysqli_fetch_array($resultado_p)){
 
 <tr>
 
-    <td><?php echo $productos[ 'codigo' ]; ?></td>
+    <td ><?php echo $productos[ 'codigo' ]; ?></td>
     <td><?php echo $productos[ 'nombre' ]; ?></td>
     
     <td><?php echo $productos[ 'valor' ]; ?></td>
     <td><?php echo $productos[ 'descripcion' ]; ?></td>
     <td><?php echo $productos[ 'stock' ]; ?></td>
-    <td><?php echo $productos[ 'marca' ]; ?></td>
+    <td><?php
+
+$consulta_m = " SELECT * FROM marcas WHERE id = " .  $productos[ 'marcas_id' ];
+ $res_m =  mysqli_query($conexion,$consulta_m) or die('no consulto el producto');
+ $marcas_id =mysqli_fetch_array($res_m);
+
+ echo $marcas_id[ 'nombre' ];
+ 
+ ?>   </td>
 
     
 
-    <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
+    <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt=""     >  </td>   
     <td>  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarproducto(<?php echo $productos[ 'id' ]; ?>);"  alt="">  </td>
 
 

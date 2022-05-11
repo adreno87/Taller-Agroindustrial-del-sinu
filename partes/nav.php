@@ -68,6 +68,18 @@
 
 
 
+
+              <li class="nav-item">
+                <a href="Marcas.php" class="nav-link">
+                  <i class="nav-icon far fa-circle text-danger"></i>
+                  <p style="color:black">Marcas</p>
+                </a>
+              </li>
+
+
+
+
+
               <li class="nav-item">
                 <a href="Ventas.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-success"></i>

@@ -15,16 +15,19 @@
     <!-- <div class="breadcrumb-item active"> -->
         <br>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
-        <h1>Productos</h1>
+        <h1>Marcas</h1>
         <br>
 
         
  
-        <?php require_once('bloques/productos/formulario_p.php'); ?>
+        <?php require_once('bloques/marcas/formulario_m.php'); ?>
         
 
-        <?php require_once('bloques/productos/consultas_p.php'); ?>
+        
+    
+        
 
+        <?php require_once('bloques/marcas/consultas_m.php'); ?>
 
         
 
@@ -57,11 +60,8 @@
    
     </body>
 
-    <script src="js/funciones_p.js"></script>
     
-
-
-  
+    <script src="js/funciones_m.js"></script>
     <?php require_once("partes/scripts.php");?>
     
 

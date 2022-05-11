@@ -9,11 +9,11 @@ function abrirformulario(dato) {
 
 
 
-function eliminarventas(ven){
+function eliminarmarca(mar){
     var mensaje = confirm("¿Esta seguro que desea eliminar este producto?");
     if(mensaje == true){
 
 
-        window.location = "bloques/ventas/eliminar_m.php?id=" + ven;
+        window.location = "bloques/marcas/eliminar_m.php?id=" + mar;
     }
 }
