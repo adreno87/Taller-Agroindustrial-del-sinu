@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
     <html lang="es">
     <?php require_once("partes/HEAD.php"); ?>
     <?php require_once("bloqueo.php"); ?>
@@ -15,18 +15,21 @@
     <!-- <div class="breadcrumb-item active"> -->
         <br>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
-        <h1>Productos</h1>
+        <h1>Recursos Humanos</h1>
+        
+        <?php require_once("bloques/r_humanos/formulario_r.php"); ?>
+
+
         <br>
-
-        
- 
-        <?php require_once('bloques/productos/formulario_p.php'); ?>
-        
-
-        <?php require_once('bloques/productos/consultas_p.php'); ?>
-
-
-        
+        <br>
+        <?php
+         if(isset($_GET["id"]) && $_GET["id"] > 0){
+            require_once('bloques/r_humanos/editar_r.php'); 
+         }else{
+            require_once('bloques/r_humanos/consulta_r.php');
+            }
+            
+            ?>
 
 
 
@@ -57,11 +60,7 @@
    
     </body>
 
-    <script src="js/funciones_p.js"></script>
-    
-
-
-  
+    <script src="js/funciones.js"></script>
     <?php require_once("partes/scripts.php");?>
     
 
