@@ -3,9 +3,9 @@
 
     $pid = $_GET['id'];
 
-    $eliminar_p = "delete from productos WHERE id = 'pid ";
+    $eliminar_p = "delete from productos WHERE id = $pid ";
     mysqli_query($conexion, $eliminar_p) or die('Error en la consulta');
 
-    header("Location: ../../productos");
+    header("Location: ../../productos.php");
 
 ?>
