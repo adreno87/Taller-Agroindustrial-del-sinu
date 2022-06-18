@@ -49,12 +49,12 @@ Insertar productos</button>
                 <td><select name= 'marcas_id'>
                 <?php 
 
-$conpro = "SELECT * from marcas order by id";
-$respro = mysqli_query($conexion,$conpro) or die('no se consulto el producto');
-    while($id = mysqli_fetch_array($respro)) { 
+$conmar = "SELECT * from marcas order by nombre";
+$resmar = mysqli_query($conexion,$conmar) or die('no se consulto el producto');
+    while($marcas_id = mysqli_fetch_array($resmar)) { 
 ?>
 
-<option value="<?php echo $id[ 'id' ]; ?>" label="<?php echo $id[ 'nombre' ]; ?>">  
+<option value="<?php echo $marcas_id[ 'id' ]; ?>" label="<?php echo $marcas_id[ 'nombre' ]; ?>">  
 
 <?php echo $id[ 'nombre' ]; ?>
 
