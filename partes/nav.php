@@ -50,12 +50,7 @@
               <?php
                 if($user['usuario']== 'admin'){
               ?>
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="nav-icon far fa-circle text-danger"></i>
-                  <p style="color:black">Compras</p>
-                </a>
-              </li>
+
 
               <li class="nav-item">
                 <a href="productos.php" class="nav-link">
@@ -107,12 +102,6 @@
               <?php
                 if($user['usuario']== 'admin'){
               ?>
-              <li class="nav-item">
-                <a href="tabla.php" class="nav-link">
-                  <i class="nav-icon far fa-circle text-indigo"></i>
-                  <p style="color:black">Tablas</p>
-                </a>
-              </li>
             </ul>
           </li>
           <!--opciones generar-->

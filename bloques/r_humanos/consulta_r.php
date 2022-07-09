@@ -47,7 +47,7 @@
                     ?>
                     <tr>
                       <td><?php echo $humanos['fecha']; ?></td>
-                      <td><?php echo $humanos['informe']; ?></td>
+                      <td><a href="informes/RH/<?php echo $humanos['informe']; ?>" target="_blank"><?php echo $humanos['informe']; ?></a></td>
                       <td><?php echo $humanos['descripcion']; ?></td>
                         
 
