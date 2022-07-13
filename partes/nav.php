@@ -59,11 +59,6 @@
                 </a>
               </li>
 
-
-
-
-
-
               <li class="nav-item">
                 <a href="Marcas.php" class="nav-link">
                   <i class="nav-icon far fa-circle text-danger"></i>
