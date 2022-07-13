@@ -55,24 +55,14 @@
                         
 
                       <td><button onclick="window.location = 'tecnologia.php?id=<?php echo $tecnologia['id']; ?>'" title="Editar" type="button" class="btn btn-success">
-                      <i class="fas fa-pencil-alt">
-                              </i>
-                      Editar</button></td>
-                      <td><button  onclick="eliminarinforme_tc(<?php echo $tecnologia['id']; ?>)" title="Borrar" type="button" class="btn btn-danger"> <i class="fas fa-trash">
-                              </i>Borrar</button></td>
+                      <i class="fas fa-pencil-alt"></i>Editar</button></td>
+                      
+                      <td><button  onclick="eliminartecnologia(<?php echo $tecnologia['id']; ?>);" title="Borrar" type="button" class="btn btn-danger"> <i class="fas fa-trash"></i>Borrar</button></td>
                     </tr>
                     <?php
                     } ?>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Fecha</th>
-                    <th>Informe</th>
-                    <th>Descripcion</th>
-                    <th>Equipo</th>
-                    <th>Dependencia</th>
-                  </tr>
-                  </tfoot>
+                  
                 </table>
               </div>
             </div>
