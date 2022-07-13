@@ -11,6 +11,7 @@ function eliminartecnologia(tid){
     var msm = confirm("¿Esta seguro que desea eliminar este registro?");
     if(msm == true){
         window.location = "bloques/tecnologia/eliminar_tc.php?id=" + tid;
+        
     }
 }
 
