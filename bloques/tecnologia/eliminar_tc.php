@@ -1,11 +1,11 @@
 <?php
     require_once("../../conexion.php");
 
-    $rid = $_GET['id'];
+    $tid = $_GET['id'];
 
-    $eliminar_tc = "DELETE FROM tecnologia WHERE id = '$rid'";
-    mysqli_query($conexion, $eliminar_tc) or die("Error en la consulta");
+    $eliminar_tc = "DELETE FROM tecnologia WHERE id = $tid";
+    mysqli_query($conexion, $eliminar_tc) or die("No se borro ningun dato");
 
-    header("Location: ../../tecnologia.php");
+    header("Location: ../../P_Tecnologia.php");
 
 ?>
