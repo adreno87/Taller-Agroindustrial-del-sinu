@@ -15,7 +15,7 @@
     <!-- <div class="breadcrumb-item active"> -->
         <br>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
-        <h1>tecno</h1>
+        <h1>TECNOLOGIA</h1>
         
         <?php require_once("bloques/tecnologia/formulario_tc.php"); ?>
 
