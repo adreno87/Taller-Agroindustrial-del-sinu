@@ -4,12 +4,16 @@
 
     if(isset($_POST['boton'])){
         //rutas de los archivos
-       $destinoinfo = "../../informes/TEC";
+       //$destinoinfo = "../../informes/TEC";
 
         //capturar datos del formulario
+        $Id = $_POST['id'];
         $fecha = $_POST['fecha'];
         $descripcion = $_POST['descripcion'];
-       
+        $Accion = $_POST['equipo'];
+        $Dependencia = $_POST['departamento'];
+        
+       /*
         //capturar archivo
         $info = $_FILES['informe'];
         // echo "archivo";
@@ -28,9 +32,9 @@
             }
         }else{
            echo "<script> alert( 'extensión no permitida') </script>";
-     }
-
-     $insertar_tc = "INSERT INT tecnologia (fecha, informe, descripcion, equipo, departamento) VALUES ('$fecha', '$ninfo', '$descripcion')";
+     }  
+*/
+     $insertar_tc = "INSERT INTO tecnologia (id, fecha, descripcion, equipo, departamento) VALUES ('$id','$fecha', '$descripcion', '$Accion', '$Dependencia')";
 
        mysqli_query($conexion, $insertar_tc) or die("Error en la consulta");
 

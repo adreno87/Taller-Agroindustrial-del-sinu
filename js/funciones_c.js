@@ -7,12 +7,10 @@ function abrirformulario(dato) {
     }
 }
 
-function eliminartecnologia(tid){
-    var msm = confirm("¿Esta seguro que desea eliminar este registro?");
-    if(msm == true){
-        window.location = "bloques/tecnologia/eliminar_tc.php?id=" + tid;
-        
+function eliminarinforme_c(cont){
+    var mensaje = confirm("¿Esta seguro que desea eliminar este informe?");
+    if(mensaje == true){
+
+        window.location = "bloques/contabilidad/eliminar_c.php?id=" +cont;
     }
 }
-
-

@@ -8,16 +8,6 @@
   <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../css/adminlte.min.css">
-
-
-
-
-
-
-
-
-
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -53,10 +43,10 @@
 
                       <td><button onclick="window.location = 'contabilidad.php?id=<?php echo $contabilidad['id']; ?>'" title="Editar" type="button" class="btn btn-success">
                       <i class="fas fa-pencil-alt">
-                              </i>
-                      Editar</button></td>
-                      <td><button  onclick="eliminarinforme_r(<?php echo $contabilidad['id']; ?>)" title="Borrar" type="button" class="btn btn-danger"> <i class="fas fa-trash">
-                              </i>Borrar</button></td>
+                              </i>Editar</button></td>
+                      <td><button  onclick="eliminarinforme_r(<?php echo $contabilidad['id']; ?>);" title="Borrar" style="cursor: pointer;" alt="">
+                              </i>Borrar</button>
+                            </td>
                     </tr>
                     <?php
                     } ?>
