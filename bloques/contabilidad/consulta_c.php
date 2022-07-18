@@ -37,29 +37,18 @@
                     ?>
                     <tr>
                       <td><?php echo $contabilidad['fecha']; ?></td>
-                      <td><?php echo $contabilidad['informe']; ?></td>
+                      <td><a href="informes: ../../C:/XAMPP/htdocs/Taller-Agroindustrial-del-sinu/informes/CONT/<?php echo $contabilidad['informe']; ?>" target="_blank"><?php echo $contabilidad['informe']; ?></a></td>
                       <td><?php echo $contabilidad['descripcion']; ?></td>
                         
-
                       <td><button onclick="window.location = 'contabilidad.php?id=<?php echo $contabilidad['id']; ?>'" title="Editar" type="button" class="btn btn-success">
                       <i class="fas fa-pencil-alt">
                               </i>Editar</button></td>
-                      <td><button  onclick="eliminarinforme_r(<?php echo $contabilidad['id']; ?>);" title="Borrar" style="cursor: pointer;" alt="">
-                              </i>Borrar</button>
-                            </td>
+                              <td><button  onclick="eliminarinforme_c(<?php echo $contabilidad['id']; ?>);" title="Borrar" type="button" class="btn btn-danger"> <i class="fas fa-trash">
+                              </i>Borrar</button></td>
                     </tr>
                     <?php
                     } ?>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Fecha</th>
-                    <th>Informe</th>
-                    <th>Descripcion</th>
-                    <th></th>
-                    <th></th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
             </div>
