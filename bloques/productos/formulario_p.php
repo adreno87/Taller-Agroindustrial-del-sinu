@@ -31,11 +31,7 @@ Insertar productos</button>
                 <td><input type="text" name="valor" required="required" placeholder="Valor del producto" class="form-control" ></td>
             </tr>
 
-            
-            <tr>
-                <th>Descripcion</th>
-                <td><input type="text" name="descripcion" required="required" placeholder="Descripcion" class="form-control" ></td>
-            </tr>
+
 
             
             <tr>

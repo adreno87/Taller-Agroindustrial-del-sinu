@@ -4,20 +4,25 @@
 
 $cim = $_GET['id'];
 
-$conproducto = "SELECT * FROM producto WHERE id = '$cim'";
+$conproducto = "SELECT * FROM productos WHERE id = '$cim'";
 $resula2 = mysqli_query($conexion, $conproducto) or die("Error en la consulta");
 $productos = mysqli_fetch_array($resula2);
 
 if(isset($_POST['boton'])){
 
 $cim = $_POST['id'];
-$productos = $_POST['nombre'];
+$codigo = $_POST['codigo'];
+$nombre = $_POST['nombre'];
+$valor = $_POST['valor'];
+
+$stock = $_POST['stock'];
 
 
 
 
 
-$editar_p = "update productos set nombre= '$productos'where id =$cim";
+
+$editar_p = "update productos set codigo='$codigo',nombre='$nombre',valor='$valor',stock='$stock' where id =$cim";
 
 mysqli_query($conexion, $editar_p) or die("Error en la consulta");
 
@@ -28,9 +33,10 @@ echo "<script> window.location ='productos.php' </script>";
 
 ?>
 
-<div id="formulario" style="display: none;">
+<div id="formulario" >
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="productos.php?id=<?php echo $productos['id'];?>" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?php echo $productos['id'];?>"   >
         <table>
 
         
@@ -40,32 +46,29 @@ echo "<script> window.location ='productos.php' </script>";
 
        <tr>
                 <th>Codigo</th>
-                <td><input type="text" name="codigo" required="required" placeholder="codigo" class="form-control" ></td>
+                <td><input type="text" name="codigo"  value="<?php echo $productos['codigo'];?>" required="required" placeholder="codigo" class="form-control" ></td>
             </tr>
 
 
 
             <tr>
                 <th>Nombre</th>
-                <td><input type="text" name="nombre" required="required" placeholder="Nombre del producto" class="form-control" ></td>
+                <td><input type="text" name="nombre" value="<?php echo $productos['nombre'];?>" required="required" placeholder="Nombre del producto" class="form-control" ></td>
             </tr>
 
             
             <tr>
                 <th>Valor</th>
-                <td><input type="text" name="valor" required="required" placeholder="Valor del producto" class="form-control" ></td>
+                <td><input type="text" name="valor" value="<?php echo $productos['valor'];?>" required="required" placeholder="Valor del producto" class="form-control" ></td>
             </tr>
 
             
-            <tr>
-                <th>Descripcion</th>
-                <td><input type="text" name="descripcion" required="required" placeholder="Descripcion" class="form-control" ></td>
-            </tr>
+            
 
             
             <tr>
                 <th>Stock</th>
-                <td><input type="text" name="stock" required="required" placeholder="Stock" class="form-control" ></td>
+                <td><input type="text" name="stock" value="<?php echo $productos['stock'];?>" required="required" placeholder="Stock" class="form-control" ></td>
             </tr>
 
             
@@ -92,7 +95,7 @@ $resmar = mysqli_query($conexion,$conmar) or die('no se consulto el producto');
             </tr>
 
                 <th>
-                    <button name="cancelar" value="insertar" type="button" class="btn btn-outline-warning" class="btn btn-warning" onclick="abrirformulario('cerrar')" >Cancelar</button>
+                    <button name="cancelar" value="insertar" type="button" class="btn btn-outline-warning" class="btn btn-warning" onclick= "window.location='productos.php'" >Cancelar</button>
                 </th>
 
                 <td><input type="submit" name="boton" value="Insertar" class="btn btn-outline-success"></td>
@@ -124,7 +127,7 @@ $resmar = mysqli_query($conexion,$conmar) or die('no se consulto el producto');
     <th>Codigo</th>
     <th>Nombre</th>
     <th>Valor</th>
-    <th>Descripcion</th>
+    
     <th>Stock</th>
     <th>Marca</th>
 
@@ -151,7 +154,7 @@ while($productos = mysqli_fetch_array($resultado_p)){
     <td><?php echo $productos[ 'nombre' ]; ?></td>
     
     <td><?php echo $productos[ 'valor' ]; ?></td>
-    <td><?php echo $productos[ 'descripcion' ]; ?></td>
+    
     <td><?php echo $productos[ 'stock' ]; ?></td>
     <td><?php
 
