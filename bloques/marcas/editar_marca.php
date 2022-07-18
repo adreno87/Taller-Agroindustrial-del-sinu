@@ -1,33 +1,29 @@
 <?php
 
-    $mid = $_GET['id'];
 
-    $edim = "SELECT * FROM marca WHERE id = '$mid'";
-    $resula = mysqli_query($conexion, $edim) or die("Error en la consulta");
-    $marca_ed = mysqli_fetch_array($resula);
+    $cim = $_GET['id'];
 
-    //editar
-    //editar
-    if(isset($_POST["boton"])){
-        $rid = $_POST["nombre"];
-        
-        
-        
+    $conmarca = "SELECT * FROM marcas WHERE id = '$cim'";
+    $resula = mysqli_query($conexion, $conmarca) or die("Error en la consulta");
+    $marca = mysqli_fetch_array($resula);
 
-        
+   if(isset($_POST['boton'])){
+
+    $cim = $_POST['id'];
+    $marcas = $_POST['nombre'];
 
 
 
 
 
+    $editar_m = "update marcas set nombre= '$marcas'where id =$cim";
+    
+    mysqli_query($conexion, $editar_m) or die("Error en la consulta");
+    
+   // header("Location: marcas.php");
+echo "<script> window.location ='marcas.php' </script>";
 
-        $insertar_m = "INSERT INTO marcas (nombre) VALUES ('$marcas')";
-        
-        mysqli_query($conexion, $insertar_m) or die("Error en la consulta");
-        
-        header("Location: ../../marcas.php");
-
-    }
+   }
 
 ?>
 
@@ -37,10 +33,10 @@
 
 
 
-<div id="formulario" style="display: none;">
+<div id="formulario" >
 
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo $marca_ed['id'];?>"   >
+    <form action="marcas.php?id=<?php echo $marca['id'];?>" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="<?php echo $marca['id'];?>"   >
         <table>
 
         
@@ -53,11 +49,11 @@
             
             <tr>
                 <th>Marca</th>
-                <td><input type="text" name="nombre" required="required" placeholder="Marca" class="form-control" ></td>
+                <td><input type="text" name="nombre" value="<?php echo $marca['nombre'];?>" required="required" placeholder="Marca" class="form-control" ></td>
             </tr>
 
                 <th>
-                    <button name="cancelar" value="insertar" type="button" class="btn btn-outline-warning" class="btn btn-warning" onclick="abrirformulario('cerrar')" >Cancelar</button>
+                    <button name="cancelar" value="insertar" type="button" class="btn btn-outline-warning" class="btn btn-warning" onclick="window.location='marcas.php'" >Cancelar</button>
                 </th>
 
                 <td><input type="submit" name="boton" value="Insertar" class="btn btn-outline-success"></td>
@@ -112,21 +108,15 @@ while($marcas = mysqli_fetch_array($resultado_m)){
 
     
 
-    <td        style="width:150px;"          >  <img src="img/editar.jpg"  width="23"  title="Editar"   alt=""   >  </td>   
-    <td  style="width:150px;"       >  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarmarca(<?php echo $marcas[ 'id' ]; ?>);"  alt="">  </td>
+    <td        style="width:150px;"          >  <img src="img/editar.jpg"  width="23"   title="Editar"   alt=""   >  </td>   
+    <td  style="width:150px;"       >  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarmarca(<?php echo $marca[ 'id' ]; ?>);"  alt="">  </td>
 
 
 </tr>
 
 <?php }  ?>
 
-
 </table>
-
-
-
-
-
 
  </div>
  <br>
@@ -135,9 +125,9 @@ while($marcas = mysqli_fetch_array($resultado_m)){
 
 
 
+ 
 
 
 
- <script src="../../js/funciones_m.js"> </script>
 
  

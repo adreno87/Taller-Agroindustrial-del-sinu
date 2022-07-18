@@ -35,7 +35,7 @@ while($marcas = mysqli_fetch_array($resultado_m)){
 
     
 
-    <td        style="width:150px;"          >  <img src="img/editar.jpg"  width="23"  title="Editar"   alt=""   >  </td>   
+    <td        style="width:150px;"          >  <img src="img/editar.jpg"  width="23" style="cursor:pointer;"   title="Editar"   alt=""  onclick="window.location ='marcas.php?id=<?php echo $marcas[ 'id' ]; ?>'"   >  </td>   
     <td  style="width:150px;"       >  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarmarca(<?php echo $marcas[ 'id' ]; ?>);"  alt="">  </td>
 
 
