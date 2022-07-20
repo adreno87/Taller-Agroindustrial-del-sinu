@@ -2,10 +2,10 @@
 <table width="100%"  border="1"  cellspacing="0" class="table table-striped">
 <tr>
     <th>Fecha</th>
-    <th>Subtotal</th>
+    
     <th>Total</th>
-    <th>Impuesto</th>
-    <th>Proveedor</th>
+    
+    
     <th>producto</th>
 
     <th></th>
@@ -28,11 +28,11 @@ while($venta = mysqli_fetch_array($resultado_v)){
 <tr>
 
     <td><?php echo $venta[ 'fecha' ]; ?></td>
-    <td><?php echo $venta[ 'sub_total' ]; ?></td>
+    
     
     <td><?php echo $venta[ 'total' ]; ?></td>
-    <td><?php echo $venta[ 'impuesto' ]; ?></td>
-    <td><?php echo $venta[ 'provedor' ]; ?></td>
+
+    
 
     <td>
         
@@ -50,7 +50,7 @@ while($venta = mysqli_fetch_array($resultado_v)){
 </td>
 
     <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
-    <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar"   alt="">          </td>
+    <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar" style="cursor:pointer;"  onclick="eliminarventas(<?php echo $venta[ 'id' ]; ?>);"   alt="">          </td>
 
 
 </tr>

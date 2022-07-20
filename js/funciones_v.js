@@ -14,6 +14,6 @@ function eliminarventas(ven){
     if(mensaje == true){
 
 
-        window.location = "bloques/ventas/eliminar_m.php?id=" + ven;
+        window.location = "bloques/ventas/eliminar_v.php?id=" + ven;
     }
 }

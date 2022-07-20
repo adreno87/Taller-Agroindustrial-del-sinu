@@ -13,25 +13,16 @@ Insertar venta</button>
                 <th>Fecha</th>
                 <td><input type="date" name="fecha" required="required" placeholder="fecha de la venta" class="form-control" ></td>
             </tr>
-            <tr>
-                <th>subtotal</th>
-                <td><input type="text" name="sub_total" required="required" placeholder="subtotal" class="form-control" ></td>
-            </tr>
+            
             
             <tr>
                 <th>total</th>
                 <td><input type="text" name="total" required="required" placeholder="Valor del producto" class="form-control" ></td>
             </tr>
             
-            <tr>
-                <th>impuesto</th>
-                <td><input type="text" name="impuesto" required="required" placeholder="impuesto" class="form-control" ></td>
-            </tr>
             
-            <tr>
-                <th>proveedor</th>
-                <td><input type="text" name="provedor" required="required" placeholder="proveedor" class="form-control" ></td>
-            </tr>
+            
+            
 
 
             <tr>
