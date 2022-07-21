@@ -37,7 +37,7 @@
                     ?>
                     <tr>
                       <td><?php echo $contabilidad['fecha']; ?></td>
-                      <td><a href="informes: ../../C:/XAMPP/htdocs/Taller-Agroindustrial-del-sinu/informes/CONT/<?php echo $contabilidad['informe']; ?>" target="_blank"><?php echo $contabilidad['informe']; ?></a></td>
+                      <td><a href="informes: ../../informes/CONT/<?php echo $contabilidad['informe']; ?>" target="_blank"><?php echo $contabilidad['informe']; ?></a></td>
                       <td><?php echo $contabilidad['descripcion']; ?></td>
                         
                       <td><button onclick="window.location = 'contabilidad.php?id=<?php echo $contabilidad['id']; ?>'" title="Editar" type="button" class="btn btn-success">

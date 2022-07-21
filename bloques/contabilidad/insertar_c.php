@@ -4,7 +4,7 @@
 
     if(isset($_POST['boton'])) {
         //rutas donde se guardan los archivos
-       $destinoinfo = ("../../C:/XAMPP/htdocs/Taller-Agroindustrial-del-sinu/informes/CONT");
+       $destinoinfo = ("../../informes/CONT");
 
         //capturar datos del formulario
         $fecha = $_POST['fecha'];

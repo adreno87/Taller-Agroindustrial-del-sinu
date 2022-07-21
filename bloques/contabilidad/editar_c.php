@@ -14,7 +14,7 @@
         //$informe = $_POST['informe'];
         $descripcion = $_POST["descripcion"];
 
-        $destinoinfo = "../../C:/XAMPP/htdocs/Taller-Agroindustrial-del-sinu/informes/CONT";
+        $destinoinfo = "../../informes/CONT";
 
         //capturar datos del formulario
         $fecha = $_POST['fecha'];
