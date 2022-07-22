@@ -31,7 +31,7 @@
         
         if(isset($_GET['id'])&& $_GET['id']!=""){
 
-            require_once('bloques/clientes/editar_cliente.php');
+            require_once('bloques/clientes/editar_c.php');
 
 
         }else{
