@@ -3,10 +3,11 @@
 <tr>
     <th>Fecha</th>
     
-    <th>Total</th>
+    <th>No venta</th>
     
     
-    <th>producto</th>
+    <th>productos</th>
+    <th>total a pagar</th>
 
     <th></th>
     <th></th>
@@ -28,9 +29,10 @@ while($venta = mysqli_fetch_array($resultado_v)){
 <tr>
 
     <td><?php echo $venta[ 'fecha' ]; ?></td>
+    <td><?php echo $venta[ 'id' ]; ?></td>
     
     
-    <td><?php echo $venta[ 'total' ]; ?></td>
+   
 
     
 
@@ -41,13 +43,11 @@ while($venta = mysqli_fetch_array($resultado_v)){
    $consulta_p = " SELECT * FROM productos WHERE id = " .  $venta[ 'productos_id' ];
     $res_producto =  mysqli_query($conexion,$consulta_p) or die('no consulto el producto');
     $productos_id =mysqli_fetch_array($res_producto);
-
-    echo $productos_id[ 'nombre' ];
-    
-    ?>
-
-
+      echo $productos_id[ 'nombre' ];
+     ?>
 </td>
+
+<td><?php echo $venta[ 'total' ]; ?></td>
 
     <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
     <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar" style="cursor:pointer;"  onclick="eliminarventas(<?php echo $venta[ 'id' ]; ?>);"   alt="">          </td>

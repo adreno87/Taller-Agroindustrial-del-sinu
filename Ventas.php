@@ -18,13 +18,27 @@
         <h1>Ventas</h1>
         
  
-        <?php require_once('bloques/ventas/formulario_v.php'); ?>
+        <button class =" btn btn-primary"  onclick="window.location='bloques/ventas/insertarventas.php?control=0' ">Ingresar venta</button>
 
         <br>
         <br>
         
+        
 
-        <?php require_once('bloques/ventas/consultas_v.php'); ?>
+        <?php
+
+        if(isset($_GET[ 'id' ]) && $_GET[ 'id' ] >0  ){
+
+
+
+
+        }else{
+            require_once('bloques/ventas/consultas_v.php'); 
+
+        }
+        
+        
+         ?>
 
 
 
