@@ -41,7 +41,24 @@ switch($control){
 
 
 <div class="col-lg-4"></div>
-<div class="col-lg-4"></div>
+<div class="col-lg-4">
+<select name="producto" class="form-control form-select">
+
+
+<?php  
+$conpro2 = "select *from productos order by nombre";
+$respro2 = mysqli_query($conexion,$conpro2)or die("no se consulto producto2");
+while($pro2 = mysqli_fetch_array($respro2)){
+?>
+
+<option    value="<?php echo $conpro2[ 'id' ];?>"   label="<?php echo $conpro2[ 'nombre' ];?>" > <?php echo $conpro2[ 'nombre' ];?>        </option>
+
+<?php } ?>
+
+</select>
+
+
+</div>
 <div class="col-lg-4"></div>
 
 
