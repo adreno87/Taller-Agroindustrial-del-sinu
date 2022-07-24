@@ -57,6 +57,12 @@ while($pro2 = mysqli_fetch_array($respro2)){
 
 </select>
 
+<br>
+
+<input  type="datetime-local" name="cantidad" required="required" placeholder="cantidad" min="1" value="1">
+
+<br>
+
 
 </div>
 <div class="col-lg-4"></div>

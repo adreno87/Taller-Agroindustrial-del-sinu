@@ -42,7 +42,7 @@ Insertar productos</button>
             
             <tr>
                 <th>Marca</th>
-                <td><select name= 'marcas_id'>
+                <td><select name= 'marcas_id'  class="form-control form-select"  >
                 <?php 
 
 $conmar = "SELECT * from marcas order by nombre";
@@ -50,7 +50,7 @@ $resmar = mysqli_query($conexion,$conmar) or die('no se consulto el producto');
     while($marcas_id = mysqli_fetch_array($resmar)) { 
 ?>
 
-<option value="<?php echo $marcas_id[ 'id' ]; ?>" label="<?php echo $marcas_id[ 'nombre' ]; ?>">  
+<option   value="<?php echo $marcas_id[ 'id' ]; ?>" label="<?php echo $marcas_id[ 'nombre' ]; ?>">  
 
 <?php echo $id[ 'nombre' ]; ?>
 
