@@ -11,7 +11,9 @@
         $descripcion = $_POST['descripcion'];
        
         //capturar archivo
-        $info = $_FILES['informe'];  
+        $info = $_FILES['informe']; 
+        // echo "archivo";
+        // echo $info['informe']; 
         $nombre_info = $info['name'];
         $tamano_info = $info['size'];
         list($ninfo, $extinfo) = explode('.', $nombre_info);
