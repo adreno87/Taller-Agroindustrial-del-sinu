@@ -18,7 +18,7 @@
 
 <?php 
 
-$consulta_v = " SELECT * FROM ventas order by fecha";
+$consulta_v = " SELECT * FROM ventas order by id";
 $resultado_v = mysqli_query($conexion,$consulta_v) or die('no se consulto las ventas');
 while($venta = mysqli_fetch_array($resultado_v)){
 

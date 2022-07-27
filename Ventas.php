@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="es">
+    <html lang="en">
     <?php require_once("partes/HEAD.php"); ?>
     <?php require_once("bloqueo.php"); ?>
     <?php require_once("conexion.php"); ?>
@@ -27,12 +27,13 @@
 
         <?php
 
-        if(isset($_GET[ 'id' ]) && $_GET[ 'id' ] >0  ){
+        if(isset($_GET[ 'id' ]) && $_GET[ 'id' ] > 0  ){
 
 
 
 
-        }else{
+        }
+        else{
             require_once('bloques/ventas/consultas_v.php'); 
 
         }
