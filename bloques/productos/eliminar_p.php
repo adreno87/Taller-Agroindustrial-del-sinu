@@ -1,11 +1,11 @@
 <?php
     require_once('../../conexion.php');
 
-    $cid = $_GET['id'];
+    $pid = $_GET['id'];
 
-    $eliminar_p = "DELETE FROM productos WHERE id = $cid";
+    $eliminar_p = "delete from productos WHERE id = $pid ";
     mysqli_query($conexion, $eliminar_p) or die('Error en la consulta');
 
-    header("Location: ../../productos");
+    header("Location: ../../productos.php");
 
 ?>

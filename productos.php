@@ -23,7 +23,23 @@
         <?php require_once('bloques/productos/formulario_p.php'); ?>
         
 
-        <?php require_once('bloques/productos/consultas_p.php'); ?>
+        <?php 
+        
+        if(isset($_GET['id'])&& $_GET['id']!=""){
+
+            require_once('bloques/productos/editar_p.php');
+
+
+        }else{
+            require_once('bloques/productos/consultas_p.php');
+
+
+        }
+        
+        
+        
+        
+        ?>
 
 
         
@@ -57,7 +73,11 @@
    
     </body>
 
-    <script src="js/funciones.js"></script>
+    <script src="js/funciones_p.js"></script>
+    
+
+
+  
     <?php require_once("partes/scripts.php");?>
     
 

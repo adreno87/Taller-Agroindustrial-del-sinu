@@ -1,12 +1,13 @@
 <div id= formulario>
-<table width="100%"  border="3"  cellspacing="0">
+<table width="100%"  border="1"  cellspacing="0" class="table table-striped">
 <tr>
     <th>Fecha</th>
-    <th>Subtotal</th>
-    <th>Total</th>
-    <th>Impuesto</th>
-    <th>Proveedor</th>
-    <th>producto</th>
+    
+    <th>No venta</th>
+    
+    
+    <th>productos</th>
+    <th>total a pagar</th>
 
     <th></th>
     <th></th>
@@ -17,7 +18,7 @@
 
 <?php 
 
-$consulta_v = " SELECT * FROM ventas order by fecha";
+$consulta_v = " SELECT * FROM ventas order by id";
 $resultado_v = mysqli_query($conexion,$consulta_v) or die('no se consulto las ventas');
 while($venta = mysqli_fetch_array($resultado_v)){
 
@@ -28,11 +29,12 @@ while($venta = mysqli_fetch_array($resultado_v)){
 <tr>
 
     <td><?php echo $venta[ 'fecha' ]; ?></td>
-    <td><?php echo $venta[ 'sub_total' ]; ?></td>
+    <td><?php echo $venta[ 'id' ]; ?></td>
     
-    <td><?php echo $venta[ 'total' ]; ?></td>
-    <td><?php echo $venta[ 'impuesto' ]; ?></td>
-    <td><?php echo $venta[ 'provedor' ]; ?></td>
+    
+   
+
+    
 
     <td>
         
@@ -41,16 +43,14 @@ while($venta = mysqli_fetch_array($resultado_v)){
    $consulta_p = " SELECT * FROM productos WHERE id = " .  $venta[ 'productos_id' ];
     $res_producto =  mysqli_query($conexion,$consulta_p) or die('no consulto el producto');
     $productos_id =mysqli_fetch_array($res_producto);
-
-    echo $productos_id[ 'nombre' ];
-    
-    ?>
-
-
+      echo $productos_id[ 'nombre' ];
+     ?>
 </td>
 
+<td><?php echo $venta[ 'total' ]; ?></td>
+
     <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
-    <td>  <img src="img/eliminar.jpg"  width="24"  title="eliminar"   alt="">          </td>
+    <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar" style="cursor:pointer;"  onclick="eliminarventas(<?php echo $venta[ 'id' ]; ?>);"   alt="">          </td>
 
 
 </tr>

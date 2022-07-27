@@ -1,9 +1,9 @@
   <!-- Main Sidebar Container -->
   <!--menu izquierdo-->
-  <aside style="background-color:#C1F4C5"class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside style="background-color:#C1F4C5" class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link" >   
-      <img  src="img/logoSINU.png" alt="AdminLTE Logo"  height="99" width="99" class="img-circle elevation-9" style="opacity: .9">
+    <a href="index3.html" class="brand-link">
+      <img src="img/logoSINU.png" alt="AdminLTE Logo" height="99" width="99" class="img-circle elevation-9" style="opacity: .9">
     </a>
 
     <!-- Barra lateral usuario -->
@@ -37,10 +37,12 @@
                with font-awesome or any other icon font library -->
 
           <!--menu dependencias-->
-          <li class="nav-item menu-open" >
+          <li class="nav-item menu-open">
             <a href="#" class="nav-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-data-fill" viewBox="0 0 16 16">
-            <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z"/><path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5ZM10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7Zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V9a1 1 0 0 1 1-1Z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard2-data-fill" viewBox="0 0 16 16">
+                <path d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
+                <path d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5ZM10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7Zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V9a1 1 0 0 1 1-1Z" />
+              </svg>
               <p style="color:black">
                 Dependencias
                 <i class="right fas fa-angle-left"></i>
@@ -48,64 +50,65 @@
             </a>
             <ul class="nav nav-treeview">
               <?php
-                if($user['usuario']== 'admin'){
+              if ($user['usuario'] == 'admin') {
               ?>
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="nav-icon far fa-circle text-danger"></i>
-                  <p style="color:black">Compras</p>
-                </a>
-              </li>
+                <li class="nav-item">
+                  <a href="Clientes.php" class="nav-link">
+                    <i class="nav-icon far fa-circle text-info"></i>
+                    <p style="color:black">Clientes</p>
+                  </a>
+                </li>
 
-              <li class="nav-item">
-                <a href="productos.php" class="nav-link">
-                  <i class="nav-icon far fa-circle text-danger"></i>
-                  <p style="color:black">productos</p>
-                </a>
-              </li>
+                <li class="nav-item">
+                  <a href="productos.php" class="nav-link">
+                    <i class="nav-icon far fa-circle text-danger"></i>
+                    <p style="color:black">productos</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="Marcas.php" class="nav-link">
+                    <i class="nav-icon far fa-circle text-danger"></i>
+                    <p style="color:black">Marcas</p>
+                  </a>
+                </li>
 
 
 
 
 
-              <li class="nav-item">
-                <a href="Ventas.php" class="nav-link">
-                  <i class="nav-icon far fa-circle text-success"></i>
-                  <p style="color:black">Ventas</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="contabilidad.php" class="nav-link">
-                  <i class="nav-icon far fa-circle text-warning"></i>
-                  <p style="color:black">Contabilidad</p>
-                </a>
-              </li>
-              
-              <li class="nav-item">
-                <a href="R_Humanos.php" class="nav-link">
-                  <i class="nav-icon far fa-circle text-info"></i>
-                  <p style="color:black">Recursos Humanos</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./P_Tecnologia.php" class="nav-link">
-                  <i class="nav-icon far fa-circle text-indigo"></i>
-                  <p style="color:black">Tecnologia</p>
-                </a>
-              </li>
+                <li class="nav-item">
+                  <a href="Ventas.php" class="nav-link">
+                    <i class="nav-icon far fa-circle text-success"></i>
+                    <p style="color:black">Ventas</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="contabilidad.php" class="nav-link">
+                    <i class="nav-icon far fa-circle text-warning"></i>
+                    <p style="color:black">Contabilidad</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a href="R_Humanos.php" class="nav-link">
+                    <i class="nav-icon far fa-circle text-info"></i>
+                    <p style="color:black">Recursos Humanos</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./P_Tecnologia.php" class="nav-link">
+                    <i class="nav-icon far fa-circle text-indigo"></i>
+                    <p style="color:black">Tecnologia</p>
+                  </a>
+                </li>
               <?php
-                }?>
-              
-              
+              } ?>
+
+
               <?php
-                if($user['usuario']== 'admin'){
+              if ($user['usuario'] == 'admin') {
               ?>
-              <li class="nav-item">
-                <a href="tabla.php" class="nav-link">
-                  <i class="nav-icon far fa-circle text-indigo"></i>
-                  <p style="color:black">Tablas</p>
-                </a>
-              </li>
             </ul>
           </li>
           <!--opciones generar-->
@@ -119,7 +122,7 @@
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">              
+            <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="pages/examples/contact-us.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -149,11 +152,11 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p style="color:black">Tabla exel</p>
                 </a>
-              </li>              
+              </li>
             </ul>
           </li>
-          <?php
-                }?>
-          <!--generar notificaciones-->
-    <!-- /.sidebar -->
+        <?php
+              } ?>
+        <!--generar notificaciones-->
+        <!-- /.sidebar -->
   </aside>
