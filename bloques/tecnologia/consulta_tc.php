@@ -58,7 +58,7 @@
                       <td><button onclick="window.location = 'tecnologia.php?id=<?php echo $tecnologia['id']; ?>'" title="Editar" type="button" class="btn btn-success">
                       <i class="fas fa-pencil-alt"></i>Editar</button></td>
                       
-                      <td><button  onclick="eliminartecnologia(<?php echo $tecnologia['id']; ?>);" title="Borrar" type="button" class="btn btn-danger" alt=""> <i class="fas fa-trash"></i>Borrar</button></td>
+                      <td><button  onclick="eliminartecnologia(<?php echo $tecnologia['id']; ?>);" title="Borrar" type="button" class="btn btn-danger" > <i class="fas fa-trash"></i>Borrar</button></td>
                     </tr>
                     <?php
                     } ?>
