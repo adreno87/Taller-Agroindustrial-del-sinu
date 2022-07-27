@@ -9,17 +9,17 @@ if(isset($_POST['boton'])){
 $codigo = $_POST['codigo'];
 $nombre = $_POST['nombre'];
 $valor = $_POST['valor'];
-$descripcion = $_POST['descripcion'];
+
 $stock = $_POST['stock'];
-$marca = $_POST['marca'];
+$marcas_id = $_POST['marcas_id'];
 
 
 
 
 
-$insertar_ = "INSERT INTO productos (codigo, nombre, valor,descripcion,stock,marca) VALUES ('$codigo', '$nombre', '$valor','$descripcion','$stock','$marca')";
+$insertar_m = "INSERT INTO productos (codigo, nombre, valor,stock,marcas_id) VALUES ('$codigo', '$nombre', '$valor','$stock',$marcas_id)";
 
-mysqli_query($conexion, $insertar_) or die("Error en la consulta");
+mysqli_query($conexion, $insertar_m) or die("Error en la consulta");
 
 header("Location: ../../productos.php");
 

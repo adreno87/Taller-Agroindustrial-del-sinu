@@ -1,14 +1,14 @@
 <!DOCTYPE html>
     <html lang="en">
-    <?php require_once("partes/HEAD.php"); ?>
-    <?php require_once("bloqueo.php"); ?>
-    <?php require_once("conexion.php"); ?>
+    <?php require_once("../../partes/HEAD2.php"); ?>
+    <?php require_once("../../bloqueo.php"); ?>
+    <?php require_once("../../conexion.php"); ?>
 
 
     <body class="hold-transition sidebar-mini layout-fixed">
 
-    <?php require_once("partes/header.php"); ?>
-    <?php require_once("partes/nav.php"); ?>
+    <?php require_once("../../partes/header.php"); ?>
+    <?php require_once("../../partes/nav.php"); ?>
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper"> 
@@ -43,7 +43,7 @@
 
 
 
-     
+    
 
 
 
@@ -75,7 +75,7 @@
     </body>
 
     <script src="js/funciones_v.js"></script>
-    <?php require_once("partes/scripts.php");?>
+    <?php require_once("../../partes/scripts.php");?>
     
 
     </html>

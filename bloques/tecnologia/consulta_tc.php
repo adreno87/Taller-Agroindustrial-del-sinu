@@ -58,7 +58,10 @@
                       <td><button onclick="window.location = 'tecnologia.php?id=<?php echo $tecnologia['id']; ?>'" title="Editar" type="button" class="btn btn-success">
                       <i class="fas fa-pencil-alt"></i>Editar</button></td>
                       
+
                       
+=======
+
                     </tr>
                     <?php
                     } ?>

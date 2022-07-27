@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="es">
     <?php require_once("partes/HEAD.php"); ?>
     <?php require_once("bloqueo.php"); ?>
@@ -15,21 +15,37 @@
     <!-- <div class="breadcrumb-item active"> -->
         <br>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
-        <h1>contabilidad</h1>
+        <h1>Clientes</h1>
+        <br>
+
         
-        <?php require_once("bloques/contabilidad/formulario_c.php"); ?>
+ 
+        <?php require_once('bloques/clientes/formulario_c.php'); ?>
+        
+
+        
+    
+        
+
+        <?php 
+        
+        if(isset($_GET['id'])&& $_GET['id']!=""){
+
+            require_once('bloques/clientes/editar_c.php');
 
 
-        <br>
-        <br>
-        <?php
-         if(isset($_GET["id"]) && $_GET["id"] > 0){
-            require_once('bloques/contabilidad/editar_c.php'); 
-         }else{
-            require_once('bloques/contabilidad/consulta_c.php');
-            }
-            
-            ?>
+        }else{
+            require_once('bloques/clientes/consultas_c.php');
+
+
+        }
+        
+        
+        
+        
+        ?>
+
+        
 
 
 
@@ -60,7 +76,8 @@
    
     </body>
 
-    <script src="js/funciones_c.js"></script>
+    
+    <script src="js/funciones_cliente.js"></script>
     <?php require_once("partes/scripts.php");?>
     
 

@@ -15,14 +15,14 @@
         <!-- <b class="colortitulo">Taller Agroindustrial del Sinu</b> -->
         <br>
         
+        
     </div>
     <!-- /.login-logo -->
-    
     
                 
 
                 <form class="box" action="login.php" method="post">
-                    <h1></h1>
+                <h4 >Taller Agroindustrial del Sinu</h4>
                     <div class="input-group mb-3">
                         <input type="text" name="usuario" placeholder="usuario">
                         

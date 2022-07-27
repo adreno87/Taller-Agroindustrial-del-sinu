@@ -1,9 +1,19 @@
-function abrirformulario(){
+function abrirformulario(dato) {
+    if(dato == "abrir")
+    document.getElementById('formulario').style.display = "block";
+
+    if(dato == "cerrar"){
+    document.getElementById('formulario').style.display = "none";
+    }
+}
 
 
 
-document.getElementById('formulario').style.display = "block";
+function eliminarventas(ven){
+    var mensaje = confirm("¿Esta seguro que desea eliminar este producto?");
+    if(mensaje == true){
 
 
-
+        window.location = "bloques/ventas/eliminar_v.php?id=" + ven;
+    }
 }

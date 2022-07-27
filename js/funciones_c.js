@@ -7,19 +7,10 @@ function abrirformulario(dato) {
     }
 }
 
-
-
-function eliminarproducto(pid){
-    var mensaje = confirm("¿Esta seguro que desea eliminar este producto?");
+function eliminarinforme_c(cont){
+    var mensaje = confirm("¿Esta seguro que desea eliminar este informe?");
     if(mensaje == true){
 
-
-        window.location = "bloques/productos/eliminar_p.php?id=" + pid;
+        window.location = "bloques/contabilidad/eliminar_c.php?id=" +cont;
     }
 }
-
-
-
-
-
-
