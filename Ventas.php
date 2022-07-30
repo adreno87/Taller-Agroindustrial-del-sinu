@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="en">
+    <html lang="es">
     <?php require_once("partes/HEAD.php"); ?>
     <?php require_once("bloqueo.php"); ?>
     <?php require_once("conexion.php"); ?>
@@ -18,32 +18,17 @@
         <h1>Ventas</h1>
         
  
-        <button class =" btn btn-primary"  onclick="window.location='bloques/ventas/insertarventas.php?control=0' ">Ingresar venta</button>
+        <?php require_once('bloques/ventas/formulario_v.php'); ?>
 
         <br>
         <br>
         
-        
 
-        <?php
-
-        if(isset($_GET[ 'id' ]) && $_GET[ 'id' ] > 0  ){
+        <?php require_once('bloques/ventas/consultas_v.php'); ?>
 
 
 
-
-        }
-        else{
-            require_once('bloques/ventas/consultas_v.php'); 
-
-        }
-        
-        
-         ?>
-
-
-
-    
+     
 
 
 
@@ -51,6 +36,8 @@
 
 
     </main>
+
+    <!-- Content Wrapper. Contains page content -->
 
 
     </div>
@@ -74,7 +61,7 @@
    
     </body>
 
-    <script src="js/funciones_v.js"></script>
+    <script src="js/funciones.js"></script>
     <?php require_once("partes/scripts.php");?>
     
 
