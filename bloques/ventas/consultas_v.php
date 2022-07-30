@@ -71,8 +71,8 @@ while($venta = mysqli_fetch_array($resultado_v)){
 
 
 
-    <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
-    <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar"   alt="">          </td>
+    <td>  <img src="img/editar.jpg"  width="23"  title="Editar"  style="cursor:pointer;"  alt="">  </td>   
+    <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar"  style="cursor:pointer;"   onclick="eliminarventas(<?php echo $venta[ 'id' ]; ?>);"   alt="">          </td>
 
 
 </tr>
