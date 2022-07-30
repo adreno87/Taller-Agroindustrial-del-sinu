@@ -15,21 +15,37 @@
     <!-- <div class="breadcrumb-item active"> -->
         <br>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
-        <h1>TECNOLOGIA</h1>
+        <h1>Clientes</h1>
+        <br>
+
         
-        <?php require_once("bloques/tecnologia/formulario_tc.php"); ?>
+ 
+        <?php require_once('bloques/clientes/formulario_c.php'); ?>
+        
+
+        
+    
+        
+
+        <?php 
+        
+        if(isset($_GET['id'])&& $_GET['id']!=""){
+
+            require_once('bloques/clientes/editar_c.php');
 
 
-        <br>
-        <br>
-        <?php
-         if(isset($_GET["id"]) && $_GET["id"] > 0){
-            require_once('bloques/tecnologia/editar_tc.php'); 
-         }else{
-            require_once('bloques/tecnologia/consulta_tc.php');
-            }
-            
-            ?>
+        }else{
+            require_once('bloques/clientes/consultas_c.php');
+
+
+        }
+        
+        
+        
+        
+        ?>
+
+        
 
 
 
@@ -60,7 +76,8 @@
    
     </body>
 
-    <script src="js/funciones.js"></script>
+    
+    <script src="js/funciones_cliente.js"></script>
     <?php require_once("partes/scripts.php");?>
     
 
