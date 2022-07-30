@@ -5,7 +5,7 @@
     
     <th>Total</th>
     
-    
+    <th>Cliente</th>
     <th>producto</th>
 
     <th></th>
@@ -31,6 +31,25 @@ while($venta = mysqli_fetch_array($resultado_v)){
     
     
     <td><?php echo $venta[ 'total' ]; ?></td>
+
+
+
+
+
+    <td>
+        
+    <?php
+
+   $consulta_c = " SELECT * FROM clientes WHERE id = " .  $venta[ 'id_cliente' ];
+    $res_cliente =  mysqli_query($conexion,$consulta_c) or die('no consulto el producto');
+    $id_cliente =mysqli_fetch_array($res_cliente);
+
+    echo $id_cliente [ 'nombre' ];
+    
+    ?>
+
+
+</td>
     
     
 
@@ -48,6 +67,9 @@ while($venta = mysqli_fetch_array($resultado_v)){
 
 
 </td>
+
+
+
 
     <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt="">  </td>   
     <td>  <img src="img/eliminar.jpg"  width="30"  title="eliminar"   alt="">          </td>

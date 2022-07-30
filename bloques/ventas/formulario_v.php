@@ -19,8 +19,75 @@ Insertar venta</button>
                 <th>total</th>
                 <td><input type="text" name="total" required="required" placeholder="Valor del producto" class="form-control" ></td>
             </tr>
+
+
+
+
             
             
+
+
+
+            <tr>
+                <th>Cliente</th>
+                <td>
+
+
+
+                 <select name= 'id_cliente'>  
+                                  
+                     
+                
+                
+                
+<?php 
+
+$concliente = "SELECT * from clientes order by nombre";
+$respro = mysqli_query($conexion,$concliente) or die('no se consulto el producto');
+while($id_cliente  = mysqli_fetch_array($respro)) { 
+?>
+      
+      
+      <option value="<?php echo $id_cliente [ 'id' ]; ?>" label="<?php echo $id_cliente [ 'nombre' ]; ?>">  
+
+<?php echo $id_cliente [ 'nombre' ]; ?>
+
+</option>    
+
+   <?php } ?>          
+
+                </select>
+
+
+
+
+                </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             <tr>
