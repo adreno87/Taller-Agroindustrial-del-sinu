@@ -14,4 +14,10 @@ function eliminarinforme_r(rid){
     }
 }
 
+function eliminartecnologia(tid){
+    var mensaje = confirm("¿Esta seguro que desea eliminar este registro?");
+    if(mensaje == true){
+        window.location = "bloques/tecnologia/eliminar_tc.php?id=" + tid;
+    }
+}
 
