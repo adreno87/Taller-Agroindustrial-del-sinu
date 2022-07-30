@@ -2,10 +2,10 @@
 <table width="100%"  border="1"  cellspacing="0" class="table table-striped">
 <tr>
     <th>Fecha</th>
-    <th>Subtotal</th>
+    
     <th>Total</th>
-    <th>Impuesto</th>
-    <th>Proveedor</th>
+    
+    
     <th>producto</th>
 
     <th></th>
@@ -17,7 +17,7 @@
 
 <?php 
 
-$consulta_v = " SELECT * FROM ventas order by fecha";
+$consulta_v = " SELECT * FROM ventas order by id";
 $resultado_v = mysqli_query($conexion,$consulta_v) or die('no se consulto las ventas');
 while($venta = mysqli_fetch_array($resultado_v)){
 
@@ -28,11 +28,11 @@ while($venta = mysqli_fetch_array($resultado_v)){
 <tr>
 
     <td><?php echo $venta[ 'fecha' ]; ?></td>
-    <td><?php echo $venta[ 'sub_total' ]; ?></td>
+    
     
     <td><?php echo $venta[ 'total' ]; ?></td>
-    <td><?php echo $venta[ 'impuesto' ]; ?></td>
-    <td><?php echo $venta[ 'provedor' ]; ?></td>
+    
+    
 
     <td>
         
