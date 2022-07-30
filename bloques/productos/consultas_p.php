@@ -4,7 +4,7 @@
     <th>Codigo</th>
     <th>Nombre</th>
     <th>Valor</th>
-    <th>Descripcion</th>
+    
     <th>Stock</th>
     <th>Marca</th>
 
@@ -31,7 +31,7 @@ while($productos = mysqli_fetch_array($resultado_p)){
     <td><?php echo $productos[ 'nombre' ]; ?></td>
     
     <td><?php echo $productos[ 'valor' ]; ?></td>
-    <td><?php echo $productos[ 'descripcion' ]; ?></td>
+    
     <td><?php echo $productos[ 'stock' ]; ?></td>
     <td><?php
 
@@ -45,7 +45,7 @@ $consulta_m = " SELECT * FROM marcas WHERE id = " .  $productos[ 'marcas_id' ];
 
     
 
-    <td>  <img src="img/editar.jpg"  width="23"  title="Editar"   alt=""     >  </td>   
+    <td>  <img src="img/editar.jpg"  width="23" style="cursor:pointer;"  title="Editar"  onclick="window.location ='productos.php?id=<?php echo $productos[ 'id' ]; ?>'"   alt=""     >  </td>   
     <td>  <img src="img/eliminar.jpg"  width="30" style="cursor:pointer;"  title="eliminar"   onclick="eliminarproducto(<?php echo $productos[ 'id' ]; ?>);"  alt="">  </td>
 
 

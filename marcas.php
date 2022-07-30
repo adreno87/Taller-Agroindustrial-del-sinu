@@ -27,7 +27,23 @@
     
         
 
-        <?php require_once('bloques/marcas/consultas_m.php'); ?>
+        <?php 
+        
+        if(isset($_GET['id'])&& $_GET['id']!=""){
+
+            require_once('bloques/marcas/editar_marca.php');
+
+
+        }else{
+            require_once('bloques/marcas/consultas_m.php');
+
+
+        }
+        
+        
+        
+        
+        ?>
 
         
 

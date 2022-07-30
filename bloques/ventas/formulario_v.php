@@ -13,25 +13,81 @@ Insertar venta</button>
                 <th>Fecha</th>
                 <td><input type="date" name="fecha" required="required" placeholder="fecha de la venta" class="form-control" ></td>
             </tr>
-            <tr>
-                <th>subtotal</th>
-                <td><input type="text" name="sub_total" required="required" placeholder="subtotal" class="form-control" ></td>
-            </tr>
+            
             
             <tr>
                 <th>total</th>
                 <td><input type="text" name="total" required="required" placeholder="Valor del producto" class="form-control" ></td>
             </tr>
+
+
+
+
             
-            <tr>
-                <th>impuesto</th>
-                <td><input type="text" name="impuesto" required="required" placeholder="impuesto" class="form-control" ></td>
-            </tr>
             
+
+
+
             <tr>
-                <th>proveedor</th>
-                <td><input type="text" name="provedor" required="required" placeholder="proveedor" class="form-control" ></td>
+                <th>Cliente</th>
+                <td>
+
+
+
+                 <select name= 'id_cliente'>  
+                                  
+                     
+                
+                
+                
+<?php 
+
+$concliente = "SELECT * from clientes order by nombre";
+$respro = mysqli_query($conexion,$concliente) or die('no se consulto el producto');
+while($id_cliente  = mysqli_fetch_array($respro)) { 
+?>
+      
+      
+      <option value="<?php echo $id_cliente [ 'id' ]; ?>" label="<?php echo $id_cliente [ 'nombre' ]; ?>">  
+
+<?php echo $id_cliente [ 'nombre' ]; ?>
+
+</option>    
+
+   <?php } ?>          
+
+                </select>
+
+
+
+
+                </td>
             </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             <tr>
