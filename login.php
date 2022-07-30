@@ -13,7 +13,7 @@
         $user=mysqli_fetch_array($resultado);
 
 
-        if($user["id"]!="" && $user["estado"]==1){
+        if($user["id"]!=""){
         $_SESSION['usuario']=$user["id"];
             header("location:plantilla.php");
         }else{

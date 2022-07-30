@@ -1,19 +1,5 @@
     <nav style="background-color:#46A41D" class="main-header navbar navbar-expand navbar-white navbar-danger" >
     <!-- Informacion usuario --> 
-    <span style= "color:black;">
-        Bienvenido <?php echo $user ["nombre"] ; ?> - Estado:
-        <?php
-          switch ($user ["estado"]){
-            case 1:
-                echo "ACTIVO";
-                break;
-            case 0:
-                echo "INACTIVO";
-                break;    
-          }
-
-        ?>
-    </span> 
 
     <!-- ----------------- -->   
     <ul class="navbar-nav">
