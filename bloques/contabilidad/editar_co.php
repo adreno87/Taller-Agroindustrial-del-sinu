@@ -3,9 +3,9 @@
     $contid = $_GET['id'];
 
     //consulta al cliente
-    $consulta_c = "SELECT * FROM contabilidad WHERE id = $contid";
-    $resultado_c = mysqli_query($conexion, $consulta_c) or die("Error en la consulta");
-    $contabilidad = mysqli_fetch_array($resultado_c); 
+    $consulta_co = "SELECT * FROM contabilidad WHERE id = $contid";
+    $resultado_co = mysqli_query($conexion, $consulta_co) or die("Error en la consulta");
+    $contabilidad = mysqli_fetch_array($resultado_co); 
 
     //editar
     if(isset($_POST["boton"])){
@@ -41,8 +41,8 @@
            echo "<script> alert( 'extensión no permitida') </script>";
      }
         //editar la informacion
-        $editar_c = "UPDATE contabilidad SET fecha = '$fecha', informe = '$destinoinfo', descripcion = '$descripcion' WHERE id = '$contid'";
-        mysqli_query($conexion, $editar_c) or die("no cambio la informacion");
+        $editar_co = "UPDATE contabilidad SET fecha = '$fecha', informe = '$destinoinfo', descripcion = '$descripcion' WHERE id = '$contid'";
+        mysqli_query($conexion, $editar_co) or die("no cambio la informacion");
         //header("Location: ../../contabilidad.php");
         echo "<script>window.Location = '../../contabilidad.php' </script>";
 
@@ -115,9 +115,9 @@
                   </thead>
                   <tbody>
                     <?php
-                    $consulta_c = "SELECT * FROM contabilidad order by fecha desc";
-                    $resultado_c = mysqli_query($conexion, $consulta_c) or die("Error en la consulta");
-                    while ($contabilidad = mysqli_fetch_array($resultado_c)) {
+                    $consulta_co = "SELECT * FROM contabilidad order by fecha desc";
+                    $resultado_co = mysqli_query($conexion, $consulta_co) or die("Error en la consulta");
+                    while ($contabilidad = mysqli_fetch_array($resultado_co)) {
 
 ?>
                     <tr>
@@ -127,7 +127,7 @@
                       <td><button onclick="window.location = 'contabilidad.php?id=<?php echo $contabilidad['id']; ?>'" title="Editar" type="button" class="btn btn-success">
                       <i class="fas fa-pencil-alt">
                               </i>Editar</button></td>
-                      <td><button  onclick="eliminarinforme_c(<?php echo $contabilidad['id']; ?>)" title="Borrar" type="button" class="btn btn-danger"> <i class="fas fa-trash">
+                      <td><button  onclick="eliminarinforme_co(<?php echo $contabilidad['id']; ?>)" title="Borrar" type="button" class="btn btn-danger"> <i class="fas fa-trash">
                               </i>Borrar</button></td>
                     </tr>
                     <?php

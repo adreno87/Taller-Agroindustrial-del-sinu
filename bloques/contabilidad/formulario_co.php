@@ -5,7 +5,7 @@ Insertar Informe</button>
 
 <div id="formulario" style="display: none;">
 
-    <form action="bloques/contabilidad/insertar.php" method="post" enctype="multipart/form-data">
+    <form action="bloques/contabilidad/insertar_co.php" method="post" enctype="multipart/form-data">
         <table>
             <tr>
                 <th>Fecha</th>

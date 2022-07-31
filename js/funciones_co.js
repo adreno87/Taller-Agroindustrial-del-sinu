@@ -7,10 +7,10 @@ function abrirformulario(dato) {
     }
 }
 
-function eliminarinforme_c(cont){
+function eliminarinforme_co(cont){
     var mensaje = confirm("¿Esta seguro que desea eliminar este informe?");
     if(mensaje == true){
 
-        window.location = "bloques/contabilidad/eliminar_c.php?id=" +cont;
+        window.location = "bloques/contabilidad/eliminar_co.php?id=" +cont;
     }
 }
