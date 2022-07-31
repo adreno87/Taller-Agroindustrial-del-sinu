@@ -17,16 +17,16 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-12 px-md-4">
         <h1>contabilidad</h1>
         
-        <?php require_once("bloques/contabilidad/formulario_c.php"); ?>
+        <?php require_once("bloques/contabilidad/formulario_co.php"); ?>
 
 
         <br>
         <br>
         <?php
          if(isset($_GET["id"]) && $_GET["id"] > 0){
-            require_once('bloques/contabilidad/editar_c.php'); 
+            require_once('bloques/contabilidad/editar_co.php'); 
          }else{
-            require_once('bloques/contabilidad/consulta_c.php');
+            require_once('bloques/contabilidad/consulta_co.php');
             }
             
             ?>
@@ -60,7 +60,7 @@
    
     </body>
 
-    <script src="js/funciones_c.js"></script>
+    <script src="js/funciones_co.js"></script>
     <?php require_once("partes/scripts.php");?>
     
 

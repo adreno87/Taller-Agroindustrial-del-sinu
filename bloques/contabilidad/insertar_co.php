@@ -32,9 +32,9 @@
            echo "<script> alert( 'extensión no permitida') </script>";
      }
     // guardar la informacion en la base de datos
-     $insertar_c = "INSERT INTO contabilidad (fecha, informe, descripcion) VALUES ('$fecha', '$destinoinfo', '$descripcion')";
+     $insertar_co = "INSERT INTO contabilidad (fecha, informe, descripcion) VALUES ('$fecha', '$destinoinfo', '$descripcion')";
 
-       mysqli_query($conexion, $insertar_c) or die("Error en la consulta");
+       mysqli_query($conexion, $insertar_co) or die("Error en la consulta");
 
        header("Location: ../../contabilidad.php");
     }
